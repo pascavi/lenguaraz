@@ -1,0 +1,29 @@
+{
+	"name": "lenguaraz",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"prepare": "panda codegen",
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next build && serve out",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"next": "15.4.1",
+		"react": "19.1.0",
+		"react-dom": "19.1.0"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@pandacss/dev": "^0.54.0",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "15.4.1",
+		"prettier": "^3.6.2",
+		"serve": "^14.2.4",
+		"typescript": "^5"
+	}
+}
