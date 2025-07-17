@@ -7,8 +7,7 @@ const wrapper = css({
 const inner = css({
 	margin: "auto",
 	maxWidth: "114.4rem",
-	width: "100%",
-	outline: "2px solid red"
+	width: "100%"
 });
 
 export const Wrapper = ({ children }: { children: React.ReactNode }) => {
