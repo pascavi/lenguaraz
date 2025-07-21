@@ -1,16 +1,47 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import react from "eslint-plugin-react";
+import js from "@eslint/js";
+import globals from "globals";
+import ts from "typescript-eslint";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const eslintConfig = ts.config([
+	react.configs.flat.recommended,
+	js.configs.recommended,
+	ts.configs.recommended,
+	{
+		plugins: {
+			react
+		},
+		languageOptions: {
+			globals: {
+				...globals.browser,
+				...globals.node,
+				...globals.jest
+			},
+			ecmaVersion: 12,
+			sourceType: "module",
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+			parserOptions: {
+				ecmaFeatures: {
+					jsx: true
+				}
+			}
+		},
+		settings: {
+			react: {
+				version: "detect"
+			}
+		}
+	},
+	{
+		rules: {
+			"react/react-in-jsx-scope": "off",
+			"no-console": "warn",
+			"@typescript-eslint/no-explicit-any": "off"
+		}
+	},
+	{
+		ignores: ["node_modules/**/*", "styled-system/**/*", "out/**/*", ".next/**/*"]
+	}
+]);
 
 export default eslintConfig;

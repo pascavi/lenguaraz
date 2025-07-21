@@ -20,6 +20,8 @@
 			}
 		],
 		"paths": {
+			"@/components": ["src/components/index"],
+			"@/styles/*": ["src/styles/*"],
 			"@/styled-system/*": ["styled-system/*"]
 		}
 	},

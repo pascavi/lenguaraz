@@ -1,10 +1,15 @@
-import { Wrapper } from "src/components/Wrapper";
+import { Header, Intro, Collage, Program, Footer, Books } from "@/components";
 
 const Page = () => {
 	return (
-		<Wrapper>
-			<p>Hello world</p>
-		</Wrapper>
+		<>
+			<Header />
+			<Intro />
+			<Collage />
+			<Program />
+			<Books />
+			<Footer />
+		</>
 	);
 };
 
