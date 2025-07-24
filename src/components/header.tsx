@@ -16,8 +16,7 @@ const inner = css({
 	"& nav ul": {
 		display: "flex",
 		gap: ["0.8rem", "1.6rem"],
-		fontSize: "clamp(1.3rem, 1.6vw, 1.6rem)",
-		fontFamily: "var(--font-sans)"
+		fontSize: "clamp(1.3rem, 1.6vw, 1.6rem)"
 	}
 });
 
@@ -28,7 +27,6 @@ const content = css({
 	gap: "3.2rem",
 	width: "85%",
 	maxWidth: "64rem",
-	fontFamily: "var(--font-sans)",
 	fontSize: "clamp(1.3rem, 1.8vw, 1.8rem)",
 	padding: ["10% 0 14%", "3% 0 7%"],
 	"& img": {

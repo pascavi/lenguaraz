@@ -6,10 +6,10 @@ const program = css({
 	flexDirection: "column",
 	gap: "2.4rem",
 	padding: ["4.8rem 0", "8rem 0"],
+	fontSize: "clamp(1.4rem, 1.8vw, 1.8rem)",
 	"& h2": {
-		fontSize: "clamp(2.4rem, 3.2vw, 3.2rem)",
-		fontWeight: "700",
-		fontFamily: "var(--font-sans)"
+		fontSize: "clamp(2.4rem, 3vw, 2.8rem)",
+		fontWeight: "700"
 	}
 });
 
@@ -28,11 +28,16 @@ const twoColumn = css({
 const day = css({
 	display: "flex",
 	flexDirection: "column",
-	gap: "1.6rem",
+	gap: ["1.6rem", "1.6rem", "2.4rem"],
 	"& h3": {
-		fontSize: "clamp(1.8rem, 2.67vw, 2rem)",
+		fontSize: "clamp(1.8rem, 2.67vw, 2.2rem)",
 		fontWeight: "700",
-		fontFamily: "var(--font-sans)"
+		fontFamily: "var(--font-blatant)"
+	},
+	"& h4": {
+		fontWeight: "700",
+		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)",
+		marginBottom: "0.8rem"
 	}
 });
 
@@ -42,9 +47,9 @@ const Day = ({ date, events }: { date: string; events: { time: string; title: st
 			<h3>{date}</h3>
 			{events.map(event => (
 				<div key={event.title}>
-					<b>
+					<h4>
 						{event.time} - {event.title}
-					</b>
+					</h4>
 					<p>{event.description}</p>
 					{event.location && <p>{event.location}</p>}
 				</div>

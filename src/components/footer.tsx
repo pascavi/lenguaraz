@@ -17,7 +17,6 @@ const block = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "1.6rem",
-	fontFamily: "var(--font-sans)",
 	fontSize: "clamp(1.3rem, 1.6vw, 1.6rem)",
 	"& > div": {
 		display: "flex",

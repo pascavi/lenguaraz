@@ -1,28 +1,6 @@
 import type { Metadata } from "next";
-import { Chivo, Tinos } from "next/font/google";
+import ReactDOM from "react-dom";
 import "./globals.css";
-import { css } from "@/styled-system/css";
-
-export const html = css({
-	fontSize: "62.5%",
-	scrollBehavior: "smooth"
-});
-
-export const body = css({
-	fontSize: "clamp(1.6rem, 1.6vw, 2rem)",
-	fontFamily: "var(--font-serif)"
-});
-
-const sans = Chivo({
-	variable: "--font-sans",
-	subsets: ["latin"]
-});
-
-const serif = Tinos({
-	variable: "--font-serif",
-	subsets: ["latin"],
-	weight: ["400", "700"]
-});
 
 export const metadata: Metadata = {
 	title: "Lenguaraz, el festival donde las lenguas son casas abiertas",
@@ -30,15 +8,17 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
+	ReactDOM.preload("/fonts/poppins.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+	ReactDOM.preload("/fonts/blatant.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 	return (
-		<html lang="en" className={`${html} ${sans.variable} ${serif.variable}`}>
+		<html lang="en">
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/meta/favicon.ico" />
 				<link rel="apple-touch-icon" href="/meta/apple-touch-icon.png" />
 				<meta name="theme-color" content="#ffffff" />
 			</head>
-			<body className={body}>{children}</body>
+			<body>{children}</body>
 		</html>
 	);
 };

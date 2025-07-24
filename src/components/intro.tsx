@@ -2,8 +2,7 @@ import { css } from "@/styled-system/css";
 import { Wrapper } from "./wrapper";
 
 const intro = css({
-	fontFamily: "var(--font-serif)",
-	fontSize: "clamp(1.8rem, 2.67vw, 2.6rem)",
+	fontSize: "clamp(1.8rem, 2.67vw, 2rem)",
 	padding: ["4.8rem 0", "8rem 0", "9.2rem 0"],
 	display: "flex",
 	flexDirection: "column",

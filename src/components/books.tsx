@@ -9,7 +9,7 @@ const books = css({
 const inner = css({
 	display: "flex",
 	gap: ["2.4rem", "4.8rem"],
-	fontFamily: "var(--font-sans)",
+	fontFamily: "var(--font-poppin)",
 	fontSize: "clamp(1.3rem, 1.6vw, 1.8rem)",
 	"& > div:first-child": {
 		width: ["25%", "20%"]
