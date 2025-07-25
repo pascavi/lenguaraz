@@ -2,7 +2,7 @@ import { css } from "@/styled-system/css";
 import { Wrapper } from "./wrapper";
 
 const footer = css({
-	background: "bg.dark",
+	backgroundColor: "primary.light",
 	padding: ["4.8rem 0 9.6rem", "5.6rem 0 9.6rem"]
 });
 
@@ -22,8 +22,7 @@ const block = css({
 		display: "flex",
 		flexWrap: "wrap",
 		gap: "3.2rem"
-	},
-	"& img": {}
+	}
 });
 
 const logos = css({

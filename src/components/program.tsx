@@ -5,9 +5,10 @@ const program = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "2.4rem",
-	padding: ["4.8rem 0", "8rem 0"],
-	fontSize: "clamp(1.4rem, 1.8vw, 1.8rem)",
+	padding: ["5.6rem 0", "8rem 0"],
+	fontSize: "clamp(1.6rem, 1.8vw, 1.8rem)",
 	"& h2": {
+		color: "primary.base",
 		fontSize: "clamp(2.4rem, 3vw, 2.8rem)",
 		fontWeight: "700"
 	}
@@ -30,6 +31,7 @@ const day = css({
 	flexDirection: "column",
 	gap: ["1.6rem", "1.6rem", "2.4rem"],
 	"& h3": {
+		color: "primary.base",
 		fontSize: "clamp(1.8rem, 2.67vw, 2.2rem)",
 		fontWeight: "700",
 		fontFamily: "var(--font-blatant)"
