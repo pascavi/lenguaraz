@@ -1,5 +1,6 @@
 import { Wrapper } from "./wrapper";
 import { css } from "@/styled-system/css";
+import Link from "next/link";
 
 const books = css({
 	background: "primary.lighter",
@@ -87,9 +88,9 @@ export const Books = () => {
 								, cerca del teatro Romea.
 							</p>
 						</div>
-						<a className={button} href="https://libreriaeducania.com/lenguaraz" target="_blank" rel="noopener noreferrer">
+						<Link className={button} href="/los-libros" rel="noopener noreferrer">
 							Ver libros
-						</a>
+						</Link>
 					</div>
 				</div>
 			</Wrapper>

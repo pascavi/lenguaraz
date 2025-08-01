@@ -1,6 +1,6 @@
 export * from "./header";
 export * from "./wrapper";
-export * from "./intro";
+export * from "./content";
 export * from "./collage";
 export * from "./program";
 export * from "./footer";

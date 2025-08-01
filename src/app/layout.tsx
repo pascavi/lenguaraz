@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import ReactDOM from "react-dom";
 import "./globals.css";
+import { Globals } from "./globals";
 
 export const metadata: Metadata = {
-	title: "Festival Lenguaraz, Murcia 5-12 Noviembre",
 	description: "Un espacio para celebrar la riqueza de las lenguas y la literatura de más allá de nuestras fronteras."
 };
 
@@ -18,7 +18,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 				<meta property="og:image" content="https://lenguarazfest.com/meta/meta.jpg" />
 				<meta name="theme-color" content="#ffffff" />
 			</head>
-			<body>{children}</body>
+			<body>
+				<Globals>{children}</Globals>
+			</body>
 		</html>
 	);
 };

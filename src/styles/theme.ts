@@ -23,7 +23,7 @@ export const theme = {
 		},
 		fonts: {
 			body: { value: "var(--font-poppins)" },
-			heading: { value: "var(--font-blatant)" }
+			secondary: { value: "var(--font-blatant)" }
 		}
 	}
 };

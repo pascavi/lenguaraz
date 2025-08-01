@@ -2,7 +2,7 @@ import { css } from "@/styled-system/css";
 import { Wrapper } from "./wrapper";
 import { Logo } from "./logo";
 import { Birds } from "./birds";
-import { Share } from "./share";
+import Link from "next/link";
 
 const header = css({
 	background: "primary.light"
@@ -15,7 +15,7 @@ const inner = css({
 	alignItems: ["center", "center", "flex-start"],
 	gap: ["3.2rem", null, 0],
 	width: "100%",
-	padding: ["3.2rem 0 4rem", null, "4rem 0 5.6rem"]
+	padding: ["3.2rem 0 4rem", null, "5.6rem 0"]
 });
 
 const logo = css({
@@ -48,6 +48,9 @@ const nav = css({
 	"& img": {
 		width: ["2.4rem", null, null, "3.2rem"],
 		aspectRatio: "1 / 1"
+	},
+	"& button": {
+		cursor: "pointer"
 	}
 });
 
@@ -57,13 +60,13 @@ const birds = css({
 	flexDirection: "column",
 	alignItems: "center",
 	gap: ["2.4rem", null, "4rem"],
-	fontFamily: "heading",
+	fontFamily: "secondary",
 	"& svg": {
-		width: ["75%", null, "70%"],
+		width: ["75%", null, "50%"],
 		maxWidth: "28rem"
 	},
 	"& h1": {
-		fontSize: "clamp(1.6rem, 2.2vw, 2.2rem)",
+		fontSize: "clamp(1.7rem, 2.0vw, 2.2rem)",
 		textAlign: "center"
 	}
 });
@@ -77,9 +80,9 @@ export const Header = ({ variant }: Props) => {
 		<header className={header}>
 			<Wrapper>
 				<div className={inner}>
-					<div className={logo}>
+					<Link href="/" className={logo} scroll={true}>
 						<Logo />
-					</div>
+					</Link>
 					{variant === "home" && (
 						<div className={birds}>
 							<Birds />
@@ -91,21 +94,21 @@ export const Header = ({ variant }: Props) => {
 					<nav className={nav}>
 						<ul>
 							<li>
-								<a href="#festival">El festival</a>
+								<Link href="/el-festival">El festival</Link>
 							</li>
 							<li>
-								<a href="#programa">El programa</a>
+								<Link href="/#programa">El programa</Link>
 							</li>
 							<li>
-								<a href="#libros">Los libros</a>
+								<Link href="/los-libros">Los libros</Link>
 							</li>
 						</ul>
 						<div>
 							<img src="/svg/bluesky.svg" alt="Bluesky" width="24" height="24" />
 							<img src="/svg/instagram.svg" alt="Instagram" width="24" height="24" />
-							<Share>
+							<button data-share>
 								<img src="/svg/share.svg" alt="Bluesky" width="24" height="24" />
-							</Share>
+							</button>
 						</div>
 					</nav>
 				</div>
