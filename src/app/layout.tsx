@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "Lenguaraz, el festival donde las lenguas son casas abiertas",
-	description: "Murcia, 6-12 Nov. Un espacio para celebrar la riqueza de las lenguas y la literatura de más allá de nuestras fronteras."
+	title: "Festival Lenguaraz, Murcia 5-12 Noviembre",
+	description: "Un espacio para celebrar la riqueza de las lenguas y la literatura de más allá de nuestras fronteras."
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -13,9 +13,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html lang="en">
 			<head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/meta/favicon.ico" />
 				<link rel="apple-touch-icon" href="/meta/apple-touch-icon.png" />
+				<meta property="og:image" content="https://lenguarazfest.com/meta/meta.jpg" />
 				<meta name="theme-color" content="#ffffff" />
 			</head>
 			<body>{children}</body>

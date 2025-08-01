@@ -5,17 +5,19 @@ const program = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "2.4rem",
-	padding: ["4.8rem 0", "8rem 0"],
-	fontSize: "clamp(1.4rem, 1.8vw, 1.8rem)",
+	padding: ["5.6rem 0", "8rem 0"],
+	fontSize: "clamp(1.6rem, 1.8vw, 1.8rem)",
 	"& h2": {
+		color: "primary.base",
 		fontSize: "clamp(2.4rem, 3vw, 2.8rem)",
-		fontWeight: "700"
+		fontWeight: "700",
+		lineHeight: "1"
 	}
 });
 
 const twoColumn = css({
 	display: "grid",
-	gridTemplateColumns: ["1f", "1fr 1fr"],
+	gridTemplateColumns: ["1f", null, "1fr 1fr"],
 	gap: ["1.6rem", "2.4rem", "3.2rem"],
 	"& > div": {
 		display: "flex",
@@ -30,9 +32,11 @@ const day = css({
 	flexDirection: "column",
 	gap: ["1.6rem", "1.6rem", "2.4rem"],
 	"& h3": {
+		color: "primary.base",
 		fontSize: "clamp(1.8rem, 2.67vw, 2.2rem)",
 		fontWeight: "700",
-		fontFamily: "var(--font-blatant)"
+		fontFamily: "var(--font-blatant)",
+		lineHeight: "1"
 	},
 	"& h4": {
 		fontWeight: "700",
@@ -89,22 +93,20 @@ export const DATA = [
 			{
 				time: "10:30",
 				title: "Presentación de Lenguaraz.",
-				description: "Presentación del festival en el Centro Penitenciario de Murcia.",
+				description: "Presentación del festival con Jorge Ollero Perán.",
 				location: "Centro Penitenciario de Murcia"
 			},
 			{
 				time: "11:00",
 				title: "“Montalbán/Montalbano”",
 				description:
-					"Diálogo sobre la literatura policiaca de Manuel Vázquez Montalbán y de Andrea Camilleri. Contaremos con autores, editores o críticos literarios.",
-				location: "Centro Penitenciario de Murcia"
+					"Diálogo sobre la literatura policiaca de Manuel Vázquez Montalbán y de Andrea Camilleri. Contaremos con autores, editores o críticos literarios. Modera: María Ángeles Carnacea."
 			},
 			{
 				time: "18:00",
 				title: "“Escribir la Utopía”",
 				description:
-					"Conversación sobre “Il libro dell'incontro”, sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores. Contaremos con especialistas en justicia restaurativa.",
-				location: "Centro Penitenciario de Murcia"
+					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos restaurativos entre víctimas de violencia armada y sus autores. Con Agnese Moro y Patricia Patrizi. Modera: Jorge Ollero Perán."
 			}
 		]
 	},
@@ -114,19 +116,18 @@ export const DATA = [
 			{
 				time: "17:30",
 				title: "Inauguración de Lenguaraz",
-				description: "Inauguración del festival con la presencia de autoridades y organizadores."
+				description: "Inauguración del festival con la presencia de autoridades y organizadores. Con Ana Sánchez y Jorge Ollero."
 			},
 			{
 				time: "18:00",
-				title: "“La bella Italia escribe”",
+				title: "“Narrar con liberación”",
 				description:
-					"El estado de la literatura y la edición italiana contemporánea y su relación con España. Debate entre dos editoras, autoras o críticas."
+					"Diálogo sobre las narrativas italianas. Con Sandra Ollo (Editorial Acantilado) y Lola López Mondéjar. Modera: Manuel Madrid."
 			},
 			{
 				time: "19:00",
-				title: "“¿Qué han hecho los romanos por nosotros?”",
-				description:
-					"Conversación sobre las influencias mutuas de la lengua italiana y española. Elena Herráiz. Linguriosa. Fiesta de inaguración del festival."
+				title: "Diálogo sobre la lengua italiana",
+				description: "Con Pedro Luis Ladrón de Guevara Mellado y María Belén Hernández González de la Universidad de Murcia."
 			}
 		]
 	},
@@ -134,23 +135,16 @@ export const DATA = [
 		date: "Viernes, 7 de noviembre",
 		events: [
 			{
-				time: "11:00",
+				time: "17:00",
 				title: "Ediciones bilingües (Nuestras lenguas)",
 				description:
-					"Presentaremos los libros “Itzulpena/Traducción” (edición bilingüe euskera-castellano), de Ángel Erro, editado por Gobierno de Navarra y “Estiu del 37” (edición bilingüe valenciano-castellano), de la editorial Llibres de l’Encobert. Contaremos con los autores o con responsables de las editoriales.",
-				location: "Chiva o municipios afectados por la DANA"
-			},
-			{
-				time: "17:30",
-				title: "Ediciones bilingües (Italiano- Castellano)",
-				description:
-					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Books y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros. Contaremos con los traductores o responsables de las editoriales."
+					"Presentaremos los libros “Itzulpena/Traducción” (euskera-castellano), de Ángel Erro y “Estiu del 37” (valenciano-castellano), de la editorial Llibres de l’Encobert. Con Angel Erro y José Lopez Camarillas. Modera: Constanza Sánchez."
 			},
 			{
 				time: "19:00",
-				title: "“Fenómeno Ferrante”",
+				title: "Ediciones bilingües (Italiano- Castellano)",
 				description:
-					"Diálogo sobre el fenómeno literario de Elena Ferrante. Contaremos con críticos literarios y responsables de su editorial en España."
+					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Books y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros. Con Jorge Martí y Juan Carlos Abril. Modera: Encarnación Esteban Bernabé."
 			},
 			{
 				time: "21:00",
@@ -163,14 +157,20 @@ export const DATA = [
 		date: "Sábado, 8 de noviembre",
 		events: [
 			{
-				time: "12:00",
+				time: "11:00",
 				title: "Literatura infantil italiana",
-				description: "Encuentro con Alessandro Montagnana o con responsables de su editorial en España, Nube 8."
+				description: "Encuentro con la autora Betrice Alemagna y María Rubio de la EOI de Murcia."
+			},
+			{
+				time: "13:00",
+				title: "“Fenómeno Ferrante”",
+				description:
+					"Diálogo sobre el fenómeno literario de Elena Ferrante. Con María Fasce, editora de Ferrante y María Reyes Ferrer de la UMU."
 			},
 			{
 				time: "19:00",
 				title: "Encuentro literario.",
-				description: "Diálogo entre Miguel Ángel Hernández y Erri di Luca y/o Alessandro Baricco y/o Helena Janeczek."
+				description: "Diálogo entre Miguel Ángel Hernández y Donatella di Pietrantonio."
 			}
 		]
 	},
@@ -181,12 +181,12 @@ export const DATA = [
 				time: "12:00",
 				title: "Todo empezó en Italia.",
 				description:
-					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Extrema derecha 2.0” y Enric Juliana, periodista y prologuista de la citada obra."
+					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Extrema derecha 2.0” y Enric Juliana, periodista y prologuista de la citada obra. Modera Elisa Reche, de El Diario.es Murcia."
 			},
 			{
 				time: "14:00",
 				title: "Clausura",
-				description: "Clausura de la primera edición de Lenguaraz."
+				description: "Clausura de la primera edición de Lenguaraz. Con Ana Sánchez y Jorge Ollero."
 			}
 		]
 	}

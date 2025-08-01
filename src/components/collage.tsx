@@ -3,20 +3,20 @@ import { css } from "@/styled-system/css";
 const IMAGES = [
 	{ src: "ferrante.jpg", alt: "Collage Image 1" },
 	{ src: "juliana.jpg", alt: "Collage Image 2" },
-	{ src: "herraiz.jpg", alt: "Collage Image 3" },
+	{ src: "mondejar.jpg", alt: "Collage Image 3" },
 	{ src: "incontro.jpg", alt: "Collage Image 10" },
 	{ src: "forti.jpg", alt: "Collage Image 4" },
 	{ src: "cenizas.jpg", alt: "Collage Image 5" },
-	{ src: "janeczek.jpg", alt: "Collage Image 6" },
+	{ src: "alemagna.jpg", alt: "Collage Image 6" },
 	{ src: "montalbano.jpg", alt: "Collage Image 8" },
-	{ src: "montagna.jpg", alt: "Collage Image 9" },
+	{ src: "rubio.jpg", alt: "Collage Image 9" },
 	{ src: "traduccion.jpg", alt: "Collage Image 11" },
 	{ src: "lidiagarcia.jpg", alt: "Collage Image 7" },
-	{ src: "baricco.jpg", alt: "Collage Image 12" }
+	{ src: "pietrantonio.jpg", alt: "Collage Image 12" }
 ];
 
 const collage = css({
-	filter: "grayscale(100%)",
+	// filter: "grayscale(100%)",
 	margin: "auto",
 	maxWidth: "130rem",
 	"& > div": {

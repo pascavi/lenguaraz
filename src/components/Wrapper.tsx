@@ -1,7 +1,7 @@
 import { css } from "@/styled-system/css";
 
 const wrapper = css({
-	margin: ["0 2rem", "0 4.8rem", "0 7.2rem"]
+	margin: ["0 2rem", "0 4.8rem", "0 5.6rem"]
 });
 
 const inner = css({

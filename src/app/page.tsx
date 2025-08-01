@@ -3,7 +3,7 @@ import { Header, Intro, Collage, Program, Footer, Books } from "@/components";
 const Page = () => {
 	return (
 		<>
-			<Header />
+			<Header variant="home" />
 			<Intro />
 			<Collage />
 			<Program />
