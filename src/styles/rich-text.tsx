@@ -1,13 +1,10 @@
-import React from "react";
 import { css } from "@/styled-system/css";
-import { Wrapper } from "./wrapper";
 
-const html = css({
+export const richText = css({
 	fontSize: "clamp(1.8rem, 2.67vw, 2rem)",
-	padding: ["4.8rem 0", null, "6.4rem 0", "8rem 0"],
 	display: "flex",
 	flexDirection: "column",
-	gap: "2.4rem",
+	gap: ["2.4rem", "3.2rem"],
 	"& h1": {
 		lineHeight: "1",
 		fontWeight: "600",
@@ -15,12 +12,12 @@ const html = css({
 		marginBottom: ["0.8rem", "1.6rem"]
 	},
 	"& h2": {
-		fontFamily: "secondary",
 		lineHeight: "1",
+		fontFamily: "secondary",
 		fontWeight: "600",
 		color: "primary.base",
-		fontSize: "clamp(2rem, 2.4vw, 2.4rem)",
-		marginBottom: "0.8rem"
+		fontSize: "clamp(2.2rem, 2.5vw, 2.5rem)",
+		marginTop: ["0.8rem", "1.6rem"]
 	},
 
 	"& b": {
@@ -34,21 +31,12 @@ const html = css({
 		textUnderlineOffset: "0.5rem",
 		fontSize: "0.9em",
 		position: "relative",
-		top: "-0.1em",
-		padding: "0 0.2rem",
-		whiteSpace: "nowrap"
+		top: "-0.05em",
+		padding: "0 0.1rem",
+		whiteSpace: "nowrap",
+		transition: "color 0.2s ease-in-out"
+	},
+	"& a:hover": {
+		color: "primary.darker"
 	}
 });
-
-type Props = {
-	children: React.ReactNode;
-	variant?: "default" | "narrow";
-};
-
-export const Content = ({ children, variant }: Props) => {
-	return (
-		<Wrapper variant={variant}>
-			<div className={html}>{children}</div>
-		</Wrapper>
-	);
-};

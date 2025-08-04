@@ -1,11 +1,15 @@
-import { Header, Content, Footer, Books } from "@/components";
+import { Header, Content, Footer, Books } from "@/templates";
 
 const Page = () => {
 	return (
 		<>
 			<title>¿Qué es lenguaraz? - Festival Lenguaraz</title>
+			<meta
+				name="description"
+				content="En la primera edición del festival Lenguaraz la lengua invitada será el italiano, una de nuestras lenguas hermanas mediterráneas."
+			/>
 			<Header />
-			<Content variant="narrow">
+			<Content title="El festival">
 				<h1>¿Qué es Lenguaraz?</h1>
 				<p>
 					Es un festival de literatura en el que también trataremos temáticas como la lingüística, la tra ducción e interpretación, la
@@ -35,7 +39,6 @@ const Page = () => {
 					necesite.
 				</p>
 			</Content>
-
 			<Books />
 			<Footer />
 		</>

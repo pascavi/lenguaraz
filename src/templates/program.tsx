@@ -1,4 +1,4 @@
-import { Wrapper } from "./wrapper";
+import { Wrapper } from "@/components";
 import { css } from "@/styled-system/css";
 
 const program = css({

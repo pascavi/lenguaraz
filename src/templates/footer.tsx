@@ -1,5 +1,5 @@
 import { css } from "@/styled-system/css";
-import { Wrapper } from "./wrapper";
+import { Wrapper } from "@/components";
 
 const footer = css({
 	backgroundColor: "primary.light",

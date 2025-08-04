@@ -16,7 +16,6 @@ const IMAGES = [
 ];
 
 const collage = css({
-	// filter: "grayscale(100%)",
 	margin: "auto",
 	maxWidth: "130rem",
 	"& > div": {

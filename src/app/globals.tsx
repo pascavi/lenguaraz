@@ -22,6 +22,7 @@ export const Globals = ({ children }: { children: React.ReactNode }) => {
 	React.useEffect(() => {
 		return () => {
 			if (!location.hash) window.scrollTo(0, 0);
+			document.getElementById("focus-root")?.focus();
 		};
 	}, [pathname]);
 	return <>{children}</>;

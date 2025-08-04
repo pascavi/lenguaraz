@@ -20,8 +20,9 @@
 			}
 		],
 		"paths": {
-			"@/components": ["src/components/index"],
-			"@/styles/*": ["src/styles/*"],
+			"@/components*": ["src/components/index"],
+			"@/templates*": ["src/templates/index"],
+			"@/styles*": ["src/styles/index"],
 			"@/styled-system/*": ["styled-system/*"]
 		}
 	},

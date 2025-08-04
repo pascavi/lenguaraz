@@ -1,19 +1,19 @@
-import { Wrapper } from "./wrapper";
+import { Wrapper } from "@/components";
 import { css } from "@/styled-system/css";
 import Link from "next/link";
 
 const books = css({
 	background: "primary.lighter",
-	padding: "4rem 0"
+	padding: ["4rem 0", null, "5.6rem 0"]
 });
 
 const inner = css({
 	display: "flex",
-	gap: ["2.4rem", "5.6rem"],
+	gap: ["2.4rem", null, null, "5.6rem"],
 	fontFamily: "var(--font-poppin)",
 	fontSize: "clamp(1.3rem, 1.6vw, 1.8rem)",
 	"& > div:first-child": {
-		width: "20%"
+		width: ["20%", null, "16%"]
 	},
 	"& > div:last-child": {
 		flex: 1,
@@ -24,6 +24,7 @@ const inner = css({
 	},
 	"& img": {
 		width: "100%",
+
 		height: "auto"
 	},
 	"& h2": {
