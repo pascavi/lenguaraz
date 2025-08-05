@@ -13,19 +13,23 @@ const inner = css({
 	alignItems: ["center", "center", "flex-start"],
 	gap: ["3.2rem", null, 0],
 	width: "100%",
-	padding: ["3.2rem 0 4rem", null, "4rem 0 5.6rem", "5.6rem 0"]
+	padding: ["3.2rem 0 4rem", null, "4rem 0", "5.6rem 0"]
 });
 
 const logo = cva({
+	base: {
+		display: "flex",
+		justifyContent: ["center", null, "flex-start"],
+		width: ["50%", null, "25%", "28%"],
+		"& svg": { width: "100%", height: "auto" }
+	},
 	variants: {
 		variant: {
 			home: {
-				width: ["50%", null, "25%", "28%"],
-				"& svg": { width: "100%", height: "auto", maxWidth: ["22rem", null, null, "28rem"] }
+				"& svg": { maxWidth: ["22rem", null, null, "28rem"] }
 			},
 			default: {
-				width: ["50%", null, "25%", "28%"],
-				"& svg": { width: "100%", height: "auto", maxWidth: ["22rem", null, null, "24rem"] }
+				"& svg": { maxWidth: ["22rem", null, null, "24rem"] }
 			}
 		}
 	}
@@ -49,18 +53,61 @@ const birds = css({
 });
 
 const nav = css({
-	display: ["none", "none", "flex"],
 	width: [null, null, "25%", "28%"],
-	justifyContent: "flex-end"
+	justifyContent: "flex-end",
+	display: ["none", "none", "flex", "flex"],
+	"& nav, & div": {
+		display: ["none", "none", "none", "flex"]
+	}
 });
 
-type Props = {
-	variant?: "default" | "home";
-};
+const burger = css({
+	display: ["block", null, null, "none"],
+	cursor: "pointer",
+	position: "absolute",
+	top: ["3.2rem", null, "4rem"],
+	right: ["2rem", null, "5.6rem"],
+	"& img": {
+		width: "24px",
+		height: "24px"
+	},
+	"& img:hover": {
+		filter: "brightness(0.8)"
+	}
+});
 
-export const Header = ({ variant = "default" }: Props) => {
+const sticky = css({
+	display: ["block", null, "null", "none"],
+	position: "fixed",
+	left: 0,
+	top: 0,
+	height: 0,
+	zIndex: 10,
+	width: "100%",
+	overflow: "hidden",
+	"& nav": {
+		position: "absolute",
+		top: "-100%",
+		width: "100%",
+		background: "#fff",
+		shadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+		padding: ["2rem 1.8rem", null, "2.4rem 2rem"],
+		transition: "top 0.3s ease-in-out"
+	},
+	"&.sticky-nav--open, &.sticky-nav--forced": {
+		height: "7.2rem",
+		"& nav": {
+			top: 0
+		}
+	}
+});
+
+export const Header = ({ variant = "default" }: { variant?: "default" | "home" }) => {
 	return (
 		<header className={header}>
+			<div className={sticky} id="sticky-nav">
+				<Navigation variant="mobile" />
+			</div>
 			<Wrapper>
 				<div className={inner}>
 					<Link href="/" className={logo({ variant })}>
@@ -74,6 +121,9 @@ export const Header = ({ variant = "default" }: Props) => {
 							</h1>
 						</div>
 					)}
+					<button className={burger} aria-label="Abrir el menú" id="burger">
+						<img src="/svg/burger.svg" alt="Abrir el menú" width="24" height="24" />
+					</button>
 					<div className={nav}>
 						<Navigation />
 					</div>

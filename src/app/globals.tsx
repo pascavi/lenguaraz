@@ -25,6 +25,24 @@ export const Globals = ({ children }: { children: React.ReactNode }) => {
 			document.getElementById("focus-root")?.focus();
 		};
 	}, [pathname]);
+
+	// sticky nav
+	React.useEffect(() => {
+		const stickyNav = document.getElementById("sticky-nav");
+		const burger = document.getElementById("burger");
+		const openOnScroll = () => stickyNav?.classList.toggle("sticky-nav--open", window.scrollY > 100);
+		const closeOnScroll = () => window.scrollY > 100 && stickyNav?.classList.remove("sticky-nav--forced");
+		const onClick = () => stickyNav?.classList.add("sticky-nav--forced");
+		document.addEventListener("scroll", openOnScroll);
+		document.addEventListener("scroll", closeOnScroll);
+		burger?.addEventListener("click", onClick);
+		return () => {
+			document.removeEventListener("scroll", openOnScroll);
+			document.removeEventListener("scroll", closeOnScroll);
+			burger?.removeEventListener("click", onClick);
+		};
+	}, [pathname]);
+
 	return <>{children}</>;
 };
 

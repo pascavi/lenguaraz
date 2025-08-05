@@ -5,24 +5,26 @@ import Link from "next/link";
 const nav = css({
 	display: "flex",
 	flexDirection: "column",
-	alignItems: "flex-end",
-	gap: "2.4rem",
-	"& ul": {
-		display: ["none", null, null, "flex"],
-		gap: ["0.8rem", "1.6rem"],
-		fontSize: "clamp(1.3rem, 1.3vw, 1.5rem)",
-		fontWeight: "600"
-	},
+	gap: "2.4rem"
+});
+
+const links = css({
+	display: "flex",
+	gap: ["1rem", "1.6rem"],
+	fontSize: "clamp(1.3rem, 1.3vw, 1.5rem)",
+	fontWeight: "600",
 	"& a": {
 		transition: "color 0.2s ease-in-out"
 	},
-	"& ul a:hover": {
+	"& a:hover": {
 		color: "primary.darker"
-	},
-	"& div": {
-		display: "flex",
-		gap: "1.6rem"
-	},
+	}
+});
+
+const social = css({
+	display: "flex",
+	justifyContent: "flex-end",
+	gap: "1.6rem",
 	"& img": {
 		width: ["2.4rem", null, null, "3.2rem"],
 		aspectRatio: "1 / 1"
@@ -35,10 +37,10 @@ const nav = css({
 	}
 });
 
-export const Navigation = () => {
+export const Navigation = ({ variant = "default" }: { variant?: "default" | "mobile" }) => {
 	return (
 		<nav className={nav}>
-			<ul>
+			<ul className={links}>
 				<li>
 					<Link href="/el-festival">El festival</Link>
 				</li>
@@ -49,17 +51,19 @@ export const Navigation = () => {
 					<Link href="/los-libros">Los libros</Link>
 				</li>
 			</ul>
-			<div>
-				<a href="https://bsky.app" target="_blank" rel="noopener noreferrer">
-					<img src="/svg/bluesky.svg" alt="Síguenos en Bluesky" width="24" height="24" />
-				</a>
-				<a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-					<img src="/svg/instagram.svg" alt="Síguenos en Instagram" width="24" height="24" />
-				</a>
-				<button data-share>
-					<img src="/svg/share.svg" alt="Compartir" width="24" height="24" />
-				</button>
-			</div>
+			{variant === "default" && (
+				<div className={social}>
+					<a href="https://bsky.app" target="_blank" rel="noopener noreferrer">
+						<img src="/svg/bluesky.svg" alt="Síguenos en Bluesky" width="24" height="24" />
+					</a>
+					<a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+						<img src="/svg/instagram.svg" alt="Síguenos en Instagram" width="24" height="24" />
+					</a>
+					<button data-share>
+						<img src="/svg/share.svg" alt="Compartir" width="24" height="24" />
+					</button>
+				</div>
+			)}
 		</nav>
 	);
 };
