@@ -13,11 +13,12 @@ const inner = css({
 type Props = {
 	children: React.ReactNode;
 	title?: string;
+	variant?: "default" | "narrow";
 };
 
-export const Content = ({ children, title: subpage }: Props) => {
+export const Content = ({ children, title: subpage, variant }: Props) => {
 	return (
-		<Wrapper variant="narrow">
+		<Wrapper variant={variant}>
 			<div className={inner}>
 				{subpage && <Breadcrumbs subpage={subpage} />}
 				<div className={richText}>{children}</div>

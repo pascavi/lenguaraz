@@ -18,6 +18,10 @@ const links = css({
 	},
 	"& a:hover": {
 		color: "primary.darker"
+	},
+	"& a.active": {
+		textDecoration: "underline",
+		textUnderlineOffset: "0.5rem"
 	}
 });
 
@@ -37,18 +41,24 @@ const social = css({
 	}
 });
 
-export const Navigation = ({ variant = "default" }: { variant?: "default" | "mobile" }) => {
+export const Navigation = ({ variant = "default", pathname }: { variant?: "default" | "mobile"; pathname?: string }) => {
 	return (
 		<nav className={nav}>
 			<ul className={links}>
 				<li>
-					<Link href="/el-festival">El festival</Link>
+					<Link href="/el-festival" className={pathname === "el-festival" ? "active" : ""}>
+						El festival
+					</Link>
 				</li>
 				<li>
-					<Link href="/#programa">El programa</Link>
+					<Link href="/el-programa" className={pathname === "el-programa" ? "active" : ""}>
+						El programa
+					</Link>
 				</li>
 				<li>
-					<Link href="/los-libros">Los libros</Link>
+					<Link href="/los-libros" className={pathname === "los-libros" ? "active" : ""}>
+						Los libros
+					</Link>
 				</li>
 			</ul>
 			{variant === "default" && (

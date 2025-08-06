@@ -5,8 +5,8 @@ const program = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "2.4rem",
-	padding: ["5.6rem 0", "8rem 0"],
 	fontSize: "clamp(1.6rem, 1.8vw, 1.8rem)",
+	padding: ["5.6rem 0", "8rem 0"],
 	"& h2": {
 		color: "primary.base",
 		fontSize: "clamp(2.4rem, 3vw, 2.8rem)",
@@ -67,22 +67,27 @@ export const Program = () => {
 		<Wrapper>
 			<div className={program} id="programa">
 				<h2>Programa, edición 2025</h2>
-
-				<div className={twoColumn}>
-					<div>
-						<p>Lenguaraz 2025 se celebrará del 5 al 12 de noviembre en Murcia y tendrá al Italiano como lengua protagonista.</p>
-						{DATA.slice(0, 2).map(item => (
-							<Day key={item.date} date={item.date} events={item.events} />
-						))}
-					</div>
-					<div>
-						{DATA.slice(2, 5).map(item => (
-							<Day key={item.date} date={item.date} events={item.events} />
-						))}
-					</div>
-				</div>
+				<ProgramTwoColumns />
 			</div>
 		</Wrapper>
+	);
+};
+
+export const ProgramTwoColumns = () => {
+	return (
+		<div className={twoColumn}>
+			<div>
+				<p>Lenguaraz 2025 se celebrará del 5 al 12 de noviembre en Murcia y tendrá al Italiano como lengua protagonista.</p>
+				{DATA.slice(0, 2).map(item => (
+					<Day key={item.date} date={item.date} events={item.events} />
+				))}
+			</div>
+			<div>
+				{DATA.slice(2, 5).map(item => (
+					<Day key={item.date} date={item.date} events={item.events} />
+				))}
+			</div>
+		</div>
 	);
 };
 

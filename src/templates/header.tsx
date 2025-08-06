@@ -13,7 +13,7 @@ const inner = css({
 	alignItems: ["center", "center", "flex-start"],
 	gap: ["3.2rem", null, 0],
 	width: "100%",
-	padding: ["3.2rem 0 4rem", null, "4rem 0", "5.6rem 0"]
+	padding: "5.6rem 0 6.4rem"
 });
 
 const logo = cva({
@@ -102,11 +102,11 @@ const sticky = css({
 	}
 });
 
-export const Header = ({ variant = "default" }: { variant?: "default" | "home" }) => {
+export const Header = ({ variant = "default", pathname }: { variant?: "default" | "home"; pathname?: string }) => {
 	return (
 		<header className={header}>
 			<div className={sticky} id="sticky-nav">
-				<Navigation variant="mobile" />
+				<Navigation variant="mobile" pathname={pathname} />
 			</div>
 			<Wrapper>
 				<div className={inner}>
@@ -125,7 +125,7 @@ export const Header = ({ variant = "default" }: { variant?: "default" | "home" }
 						<img src="/svg/burger.svg" alt="Abrir el menú" width="24" height="24" />
 					</button>
 					<div className={nav}>
-						<Navigation />
+						<Navigation pathname={pathname} />
 					</div>
 				</div>
 			</Wrapper>

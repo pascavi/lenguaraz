@@ -28,7 +28,7 @@ const inner = css({
 		height: "auto"
 	},
 	"& h2": {
-		fontSize: "clamp(2rem, 2vw, 2.4rem)",
+		fontSize: "clamp(2rem, 2vw, 2.2rem)",
 		fontWeight: "600"
 	}
 });
