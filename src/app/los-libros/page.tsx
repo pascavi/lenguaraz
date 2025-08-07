@@ -1,4 +1,4 @@
-import { Header, Content, Footer, Books } from "@/templates";
+import { Header, Content, Footer, Educania, Books } from "@/templates";
 
 const Page = () => {
 	return (
@@ -9,19 +9,20 @@ const Page = () => {
 				content="Listado de los libros que presentaremos o comentaremos durante la primera edición del festival Lenguaraz."
 			/>
 			<Header pathname="los-libros" />
-			<Content title="Los libros">
+			<Content title="Los libros" variant="narrow">
 				<h1>Los libros del Lenguaraz</h1>
-				<p>Hemos hecho una lista con todos los libros que se presentarán o de los que se hablará en el festival.</p>
 				<p>
-					Puedes conseguirlos en nuestra librería de confianza,{" "}
+					Hemos hecho una lista con todos los libros que se presentarán o de los que se hablará en el festival. Puedes conseguirlos en
+					nuestra librería de confianza,{" "}
 					<a href="https://libreriaeducania.com/" target="_blank" rel="noopener noreferrer">
 						Educania
 					</a>
 					, cerca del teatro Romea.
 				</p>
+				<Books />
 			</Content>
 
-			<Books />
+			<Educania />
 			<Footer />
 		</>
 	);

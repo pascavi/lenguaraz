@@ -149,7 +149,7 @@ export const DATA = [
 				time: "19:00",
 				title: "Ediciones bilingües (Italiano- Castellano)",
 				description:
-					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Books y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros. Con Jorge Martí y Juan Carlos Abril. Modera: Encarnación Esteban Bernabé."
+					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Educania y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros. Con Jorge Martí y Juan Carlos Abril. Modera: Encarnación Esteban Bernabé."
 			},
 			{
 				time: "21:00",
