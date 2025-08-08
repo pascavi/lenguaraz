@@ -14,7 +14,6 @@ export const richText = css({
 	"& h2": {
 		lineHeight: "1",
 		fontFamily: "secondary",
-		fontWeight: "600",
 		color: "primary.base",
 		fontSize: "clamp(2.2rem, 2.5vw, 2.5rem)",
 		marginTop: ["0.8rem", "1.6rem"]

@@ -12,7 +12,6 @@ const intro = css({
 	"& h2": {
 		fontFamily: "secondary",
 		lineHeight: "1",
-		fontWeight: "600",
 		color: "primary.base",
 		fontSize: "clamp(2rem, 2.4vw, 2.4rem)",
 		marginBottom: "0.8rem"
@@ -23,7 +22,7 @@ export const Intro = () => {
 	return (
 		<Wrapper>
 			<div className={intro}>
-				<h2>Murcia. Del 5 al 12 de Noviembre.</h2>
+				{/* <h2>Murcia. Del 5 al 9 de Noviembre.</h2> */}
 				<div className={richText}>
 					<p>
 						<b>Lenguaraz</b> es un festival para celebrar la riqueza de las lenguas. Es un festival para disfrutar de la literatura

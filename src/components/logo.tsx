@@ -11,11 +11,7 @@ export const Logo = ({ width = 100 }: { width?: number }) => {
 			<g strokeMiterlimit="3.4" letterSpacing="0" textAnchor="middle">
 				<text x="49.245" y="7.464" strokeWidth=".437" fontFamily="Blatant" fontSize="10.493" fontWeight="400">
 					<tspan x="49.245" y="7.464">
-						1
-						<tspan baselineShift="super" fontSize="6.821">
-							a
-						</tspan>
-						edición 2025
+						Murcia 5-9 Nov.
 					</tspan>
 				</text>
 				<text x="68.569" y="31.227" strokeWidth="1.211" fontSize="29.067" fontWeight="600">

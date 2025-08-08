@@ -48,7 +48,7 @@ export const Footer = () => (
 				</div>
 				<div className={block}>
 					<p>Contacto:</p>
-					<a href="mailto:info@lenguaraz.es">info@lenguarazfest.com</a>
+					<a href="mailto:hola@lenguarazfest.com">hola@lenguarazfest.com</a>
 				</div>
 			</div>
 		</Wrapper>

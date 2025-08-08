@@ -47,8 +47,11 @@ const birds = css({
 		maxWidth: "26rem"
 	},
 	"& h1": {
-		fontSize: "clamp(1.7rem, 2.0vw, 2.2rem)",
+		fontSize: "clamp(1.8rem, 2.3vw, 2.3rem)",
 		textAlign: "center"
+	},
+	"& h1 b": {
+		textShadow: "0 0 1px rgba(0, 0, 0, 0.5)"
 	}
 });
 
@@ -65,7 +68,7 @@ const burger = css({
 	display: ["block", null, null, "none"],
 	cursor: "pointer",
 	position: "absolute",
-	top: ["3.2rem", null, "4rem"],
+	top: ["2rem", null, "4rem"],
 	right: ["2rem", null, "5.6rem"],
 	"& img": {
 		width: "24px",
@@ -117,7 +120,7 @@ export const Header = ({ variant = "default", pathname }: { variant?: "default" 
 						<div className={birds}>
 							<Birds />
 							<h1>
-								Donde las lenguas son <b>casas abiertas</b>
+								Donde las lenguas <b>son casas abiertas</b>
 							</h1>
 						</div>
 					)}

@@ -47,7 +47,11 @@ const button = css({
 	color: "white",
 	padding: "0.8rem 1.6rem",
 	borderRadius: "0.8rem",
-	fontSize: "clamp(1.3rem, 1.4vw, 1.4rem)"
+	fontSize: "clamp(1.3rem, 1.4vw, 1.4rem)",
+	transition: "background 0.3s ease",
+	"&:hover": {
+		background: "primary.darker"
+	}
 });
 
 const image = css({
@@ -56,6 +60,7 @@ const image = css({
 	alignItems: "flex-start",
 
 	"& picture": {
+		width: "100%",
 		display: "block",
 		aspectRatio: "1 / 1",
 		background: "#fff2e3",
@@ -73,7 +78,7 @@ export const Educania = () => {
 				<div className={inner}>
 					<div className={image}>
 						<picture>
-							<img src="/svg/educania.svg" alt="" width="100" />
+							<img src="/svg/educania.svg" alt="" width="100" height="100" />
 						</picture>
 					</div>
 

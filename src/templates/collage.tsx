@@ -9,7 +9,7 @@ const IMAGES = [
 	{ src: "cenizas.jpg", alt: "Collage Image 5" },
 	{ src: "alemagna.jpg", alt: "Collage Image 6" },
 	{ src: "montalbano.jpg", alt: "Collage Image 8" },
-	{ src: "rubio.jpg", alt: "Collage Image 9" },
+	{ src: "agnese.jpg", alt: "Collage Image 9" },
 	{ src: "traduccion.jpg", alt: "Collage Image 11" },
 	{ src: "lidiagarcia.jpg", alt: "Collage Image 7" },
 	{ src: "pietrantonio.jpg", alt: "Collage Image 12" }

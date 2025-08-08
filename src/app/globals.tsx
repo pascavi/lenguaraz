@@ -49,7 +49,7 @@ export const Globals = ({ children }: { children: React.ReactNode }) => {
 const shareAction = () => {
 	const shareData = {
 		title: "Lenguaraz, el festival donde las lenguas son casas abiertas",
-		text: "Murcia, 5-12 Nov. Un espacio para celebrar la riqueza de las lenguas y la literatura de más allá de nuestras fronteras.",
+		text: "Murcia, 5-9 Nov. Un espacio para celebrar la riqueza de las lenguas y la literatura de más allá de nuestras fronteras.",
 		url: "https://lenguarazfest.com"
 	};
 	try {
