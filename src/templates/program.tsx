@@ -77,7 +77,9 @@ export const ProgramTwoColumns = () => {
 	return (
 		<div className={twoColumn}>
 			<div>
-				<p>Lenguaraz 2025 se celebrará del 5 al 12 de noviembre en Murcia y tendrá al Italiano como lengua protagonista.</p>
+				<p>
+					Lenguaraz 2025 se celebrará del <b>5 al 9 de noviembre</b> en Murcia y tendrá al Italiano como lengua protagonista.
+				</p>
 				{DATA.slice(0, 2).map(item => (
 					<Day key={item.date} date={item.date} events={item.events} />
 				))}

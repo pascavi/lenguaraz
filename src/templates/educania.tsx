@@ -9,11 +9,12 @@ const books = css({
 
 const inner = css({
 	display: "flex",
-	gap: ["2.4rem", null, null, "5.6rem"],
+	alignItems: ["flex-start", "center"],
+	gap: "2.4rem",
 	fontFamily: "var(--font-poppin)",
 	fontSize: "clamp(1.3rem, 1.6vw, 1.8rem)",
 	"& > div:first-child": {
-		width: ["20%", null, "16%"]
+		width: ["18%", null, "16%"]
 	},
 	"& > div:last-child": {
 		flex: 1,
@@ -47,7 +48,11 @@ const button = css({
 	color: "white",
 	padding: "0.8rem 1.6rem",
 	borderRadius: "0.8rem",
-	fontSize: "clamp(1.3rem, 1.4vw, 1.4rem)"
+	fontSize: "clamp(1.3rem, 1.4vw, 1.4rem)",
+	transition: "background 0.3s ease",
+	"&:hover": {
+		background: "primary.darker"
+	}
 });
 
 const image = css({
@@ -56,10 +61,10 @@ const image = css({
 	alignItems: "flex-start",
 
 	"& picture": {
+		width: "100%",
+		maxWidth: "10rem",
 		display: "block",
-		aspectRatio: "1 / 1",
-		background: "#fff2e3",
-		borderRadius: "100%"
+		aspectRatio: "100 / 58"
 	},
 	"& img": {
 		width: "100%"
@@ -73,7 +78,7 @@ export const Educania = () => {
 				<div className={inner}>
 					<div className={image}>
 						<picture>
-							<img src="/svg/educania.svg" alt="" width="100" />
+							<img src="/svg/sailor.svg" alt="" width="58" height="100" />
 						</picture>
 					</div>
 

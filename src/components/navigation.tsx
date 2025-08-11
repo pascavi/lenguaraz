@@ -14,6 +14,7 @@ const links = css({
 	fontSize: "clamp(1.3rem, 1.3vw, 1.5rem)",
 	fontWeight: "600",
 	"& a": {
+		fontFamily: "primary",
 		transition: "color 0.2s ease-in-out"
 	},
 	"& a:hover": {
@@ -63,10 +64,10 @@ export const Navigation = ({ variant = "default", pathname }: { variant?: "defau
 			</ul>
 			{variant === "default" && (
 				<div className={social}>
-					<a href="https://bsky.app" target="_blank" rel="noopener noreferrer">
+					<a href="https://bsky.app/profile/lenguarazfest.bsky.social" target="_blank" rel="noopener noreferrer">
 						<img src="/svg/bluesky.svg" alt="Síguenos en Bluesky" width="24" height="24" />
 					</a>
-					<a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+					<a href="https://www.instagram.com/lenguarazfest" target="_blank" rel="noopener noreferrer">
 						<img src="/svg/instagram.svg" alt="Síguenos en Instagram" width="24" height="24" />
 					</a>
 					<button data-share>

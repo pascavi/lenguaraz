@@ -27,8 +27,20 @@ export const theme = {
 			}
 		},
 		fonts: {
-			body: { value: "var(--font-poppins)" },
+			primary: { value: "var(--font-poppins)" },
 			secondary: { value: "var(--font-blatant)" }
+		}
+	},
+	keyframes: {
+		bird: {
+			"0%, 100%": { transform: "translateY(0)" },
+			"50%": { transform: "translateY(3%) rotate(1deg)" }
+		},
+		dialogue: {
+			"0%, 100%": { opacity: 1, transform: "scale(1)" },
+			"2%": { opacity: 0, transform: "scale(1)" },
+			"5%": { opacity: 0, transform: "scale(0.9)" },
+			"15%": { opacity: 1, transform: "scale(1)" }
 		}
 	}
 };

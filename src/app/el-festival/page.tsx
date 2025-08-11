@@ -3,7 +3,7 @@ import { Header, Content, Footer, Educania } from "@/templates";
 const Page = () => {
 	return (
 		<>
-			<title>¿Qué es lenguaraz? - Festival Lenguaraz</title>
+			<title>¿Qué es lenguaraz? - Festival Lenguaraz, Murcia 5-9 Nov</title>
 			<meta
 				name="description"
 				content="Lenguaraz es un festival de literatura que tiene lugar en la ciudad de Murcia y celebra la riqueza de las lenguas."
@@ -17,9 +17,12 @@ const Page = () => {
 				</p>
 				<p>
 					Creemos firmemente que las lenguas han de ser puentes y no muros. Entendemos que las lenguas que existen en el mundo ensanchan
-					nuestra realidad y enriquecen nuestro pensamiento. Estamos convencidas de que, como dice el verso de Luis Melgarejo,{" "}
-					<b>«las lenguas son casas abiertas»</b> y, por ello, <b>Lenguaraz</b> será un espacio de promoción de la lectura centrado en todo
-					lo que tenga que ver con las lenguas y las distintas formas de ver el mundo que nos da la diversidad lingüística.
+					nuestra realidad y enriquecen nuestro pensamiento. Estamos convencidas de que, como dice el verso de{" "}
+					<a href="https://www.lacasaconlibros.com/" target="_blank" rel="noreferrer">
+						Luis Melgarejo
+					</a>
+					, «las lenguas son casas abiertas» y, por ello, <b>Lenguaraz</b> será un espacio de promoción de la lectura centrado en todo lo
+					que tenga que ver con las lenguas y las distintas formas de ver el mundo que nos da la diversidad lingüística.
 				</p>
 				<p>
 					<b>Lenguaraz</b> impulsará la lectura y la literatura organizando ponencias y diálogos con autores/as, editores/as, traductores,

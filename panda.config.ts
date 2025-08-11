@@ -2,6 +2,7 @@ import { defineConfig } from "@pandacss/dev";
 import { theme } from "./src/styles/theme";
 
 export default defineConfig({
+	hash: true,
 	// Whether to use css reset
 	preflight: true,
 

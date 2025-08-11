@@ -42,13 +42,13 @@ export const Footer = () => (
 				<div className={block}>
 					<p>Colabora:</p>
 					<div className={logos}>
-						<img src="/logos/ministerio.svg" alt="Logo 1" width="200" height="100" />
+						<img src="/logos/ministerio.jpg" alt="Logo 1" width="200" height="100" />
 						<img src="/logos/murcia.svg" alt="Logo 2" width="200" height="100" />
 					</div>
 				</div>
 				<div className={block}>
 					<p>Contacto:</p>
-					<a href="mailto:info@lenguaraz.es">info@lenguarazfest.com</a>
+					<a href="mailto:hola@lenguarazfest.com">hola@lenguarazfest.com</a>
 				</div>
 			</div>
 		</Wrapper>
