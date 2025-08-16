@@ -8,6 +8,7 @@ const Page = () => {
 				name="description"
 				content="Lenguaraz es un festival de literatura que tiene lugar en la ciudad de Murcia y celebra la riqueza de las lenguas."
 			/>
+			<meta name="canonical" content="https://lenguarazfest.com/el-festival" />
 			<Header pathname="el-festival" />
 			<Content title="El festival" variant="narrow">
 				<h1>¿Qué es Lenguaraz?</h1>

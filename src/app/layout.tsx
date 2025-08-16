@@ -17,7 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 				</head>
 				<body>{children}</body>
 			</Globals>
-			<Analytics />
+			{process.env.NODE_ENV === "production" && <Analytics />}
 		</html>
 	);
 };

@@ -16,7 +16,7 @@ const inner = cva({
 				maxWidth: "114.4rem"
 			},
 			narrow: {
-				maxWidth: "92rem"
+				maxWidth: "96rem"
 			}
 		}
 	}

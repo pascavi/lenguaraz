@@ -9,7 +9,7 @@ export const Logo = ({ width = 100 }: { width?: number }) => {
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" viewBox="0 0 137.85 49.367" className={svg} id="logo">
 			<g strokeMiterlimit="3.4" letterSpacing="0" textAnchor="middle">
-				<text x="49.245" y="7.464" strokeWidth=".437" fontFamily="Blatant" fontSize="10.493" fontWeight="400">
+				<text x="49.245" y="7.464" strokeWidth=".437" fontFamily="Blatant" fontSize="11.3" fontWeight="400">
 					<tspan x="49.245" y="7.464">
 						Murcia 5-9 Nov.
 					</tspan>
