@@ -3,6 +3,6 @@ export * from "./content";
 export * from "./collage";
 export * from "./program";
 export * from "./footer";
-export * from "./educania";
+export * from "./promo";
 export * from "./intro";
 export * from "./books";

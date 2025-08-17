@@ -72,9 +72,35 @@ const image = css({
 	}
 });
 
-export const Educania = () => {
+export const PromoBooks = () => {
 	return (
-		<div id="libros" className={books}>
+		<Banner title="Los libros del Lenguaraz" ctaUrl="/los-libros" ctaText="Ver libros">
+			<p>Hemos hecho una lista con todos los libros que se presentarán o de los que se hablará en el festival.</p>
+			<p>
+				Puedes conseguirlos en nuestra librería de confianza,{" "}
+				<a href="https://libreriaeducania.com/" target="_blank" rel="noopener noreferrer">
+					Educania
+				</a>
+				, cerca del teatro Romea.
+			</p>
+		</Banner>
+	);
+};
+
+export const PromoProgram = () => {
+	return (
+		<Banner title="Lenguaraz, edición 2025" ctaUrl="/el-programa" ctaText="Ver programa">
+			<p>
+				La edición 2025 del festival Lenguaraz se celebrará en Murcia del 5 al 9 de noviembre y se tendrá como lengua invitada al{" "}
+				<b>italiano</b>.
+			</p>
+		</Banner>
+	);
+};
+
+const Banner = ({ title, ctaUrl, ctaText, children }: { title: string; ctaUrl: string; ctaText: string; children?: React.ReactNode }) => {
+	return (
+		<div className={books}>
 			<Wrapper>
 				<div className={inner}>
 					<div className={image}>
@@ -84,19 +110,10 @@ export const Educania = () => {
 					</div>
 
 					<div>
-						<h2>Los libros del Lenguaraz</h2>
-						<div className={content}>
-							<p>Hemos hecho una lista con todos los libros que se presentarán o de los que se hablará en el festival.</p>
-							<p>
-								Puedes conseguirlos en nuestra librería de confianza,{" "}
-								<a href="https://libreriaeducania.com/" target="_blank" rel="noopener noreferrer">
-									Educania
-								</a>
-								, cerca del teatro Romea.
-							</p>
-						</div>
-						<Link className={button} href="/los-libros" rel="noopener noreferrer">
-							Ver libros
+						<h2>{title}</h2>
+						<div className={content}>{children}</div>
+						<Link className={button} href={ctaUrl}>
+							{ctaText}
 						</Link>
 					</div>
 				</div>

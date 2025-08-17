@@ -1,4 +1,4 @@
-import { Header, Content, Footer, Educania, Books } from "@/templates";
+import { Header, Content, Footer, PromoProgram, Books } from "@/templates";
 
 const Page = () => {
 	return (
@@ -23,7 +23,7 @@ const Page = () => {
 				<Books />
 			</Content>
 
-			<Educania />
+			<PromoProgram />
 			<Footer />
 		</>
 	);

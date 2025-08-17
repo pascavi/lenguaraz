@@ -1,4 +1,4 @@
-import { Header, Content, Footer, Educania } from "@/templates";
+import { Header, Content, Footer, PromoProgram } from "@/templates";
 
 const Page = () => {
 	return (
@@ -21,7 +21,9 @@ const Page = () => {
 				<p>
 					Puedes ponerte en contacto con nostros a traves del email{" "}
 					<b>
-						&#104;&#111;&#108;&#097;&#064;&#108;&#101;&#110;&#103;&#117;&#097;&#114;&#097;&#122;&#102;&#101;&#115;&#116;&#046;&#099;&#111;&#109;
+						<a href="mailto:&#104;&#111;&#108;&#097;&#064;&#108;&#101;&#110;&#103;&#117;&#097;&#114;&#097;&#122;&#102;&#101;&#115;&#116;&#046;&#099;&#111;&#109;">
+							&#104;&#111;&#108;&#097;&#064;&#108;&#101;&#110;&#103;&#117;&#097;&#114;&#097;&#122;&#102;&#101;&#115;&#116;&#046;&#099;&#111;&#109;
+						</a>
 					</b>
 					.
 					<a id="agradecimientos" />
@@ -40,8 +42,7 @@ const Page = () => {
 				</p>
 				<h2>Aviso legal</h2>
 				<p>
-					La Fábrica de ilusiones S.L. es titular del sitio web <a href="https://www.lenguaraz.com">www.lenguaraz.com</a>. Los datos
-					identificativos del titular son: <br />
+					La Fábrica de ilusiones S.L. es titular del sitio web <i>lenguarazfest.com</i>. Los datos identificativos del titular son: <br />
 					Nombre: La Fábrica de ilusiones S.L.
 					<br />
 					CIF: B42791962
@@ -55,7 +56,7 @@ const Page = () => {
 					Esta web no utiliza no almacena datos personales de los usuarios. Esta web no hace uso de <i>cookies</i>.
 				</p>
 			</Content>
-			<Educania />
+			<PromoProgram />
 			<Footer />
 		</>
 	);
