@@ -33,7 +33,7 @@ export const Globals = ({ children }: { children: React.ReactNode }) => {
 		const openOnScroll = () => stickyNav?.classList.toggle("sticky-nav--open", window.scrollY > 100);
 		const closeOnScroll = () => window.scrollY > 100 && stickyNav?.classList.remove("sticky-nav--forced");
 		const onClick = () => stickyNav?.classList.add("sticky-nav--forced");
-		document.addEventListener("scroll", openOnScroll);
+		setTimeout(() => document.addEventListener("scroll", openOnScroll), 100);
 		document.addEventListener("scroll", closeOnScroll);
 		burger?.addEventListener("click", onClick);
 		return () => {

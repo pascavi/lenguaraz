@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const books = css({
 	background: "primary.lighter",
-	padding: ["4rem 0", null, "5.6rem 0"]
+	padding: "4rem 0"
 });
 
 const inner = css({
@@ -12,16 +12,17 @@ const inner = css({
 	alignItems: ["flex-start", "center"],
 	gap: "2.4rem",
 	fontFamily: "var(--font-poppin)",
-	fontSize: "clamp(1.3rem, 1.6vw, 1.8rem)",
+	fontSize: "clamp(1.6rem, 1.6vw, 1.8rem)",
 	"& > div:first-child": {
-		width: ["18%", null, "16%"]
+		width: ["18%", null, "15%"]
 	},
 	"& > div:last-child": {
 		flex: 1,
 		display: "flex",
 		flexDirection: "column",
 		gap: "2.4rem",
-		alignItems: "start"
+		alignItems: "start",
+		padding: ["0", null, "3.2rem 0 1.6rem"]
 	},
 	"& img": {
 		width: "100%",
@@ -62,7 +63,7 @@ const image = css({
 
 	"& picture": {
 		width: "100%",
-		maxWidth: "10rem",
+		maxWidth: "11rem",
 		display: "block",
 		aspectRatio: "100 / 58"
 	},

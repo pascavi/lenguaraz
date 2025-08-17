@@ -8,6 +8,7 @@ const Page = () => {
 				name="description"
 				content="Listado de los libros que presentaremos o comentaremos durante la primera edición del festival Lenguaraz."
 			/>
+			<meta name="canonical" content="https://lenguarazfest.com/los-libros" />
 			<Header pathname="los-libros" />
 			<Content title="Los libros" variant="narrow">
 				<h1>Los libros del Lenguaraz</h1>

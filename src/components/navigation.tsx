@@ -1,11 +1,12 @@
 import { css } from "@/styled-system/css";
-
 import Link from "next/link";
+import { Social } from "@/components";
 
-const nav = css({
+const wrapper = css({
 	display: "flex",
-	flexDirection: "column",
-	gap: "2.4rem"
+	flexDirection: ["row", null, null, "column"],
+	justifyContent: "space-between",
+	gap: ["1.6rem", "2.4rem"]
 });
 
 const links = css({
@@ -26,25 +27,9 @@ const links = css({
 	}
 });
 
-const social = css({
-	display: "flex",
-	justifyContent: "flex-end",
-	gap: "1.6rem",
-	"& img": {
-		width: ["2.4rem", null, null, "3.2rem"],
-		aspectRatio: "1 / 1"
-	},
-	"& img:hover": {
-		filter: "brightness(0.8)"
-	},
-	"& button": {
-		cursor: "pointer"
-	}
-});
-
 export const Navigation = ({ variant = "default", pathname }: { variant?: "default" | "mobile"; pathname?: string }) => {
 	return (
-		<nav className={nav}>
+		<nav className={wrapper}>
 			<ul className={links}>
 				<li>
 					<Link href="/el-festival" className={pathname === "el-festival" ? "active" : ""}>
@@ -62,19 +47,7 @@ export const Navigation = ({ variant = "default", pathname }: { variant?: "defau
 					</Link>
 				</li>
 			</ul>
-			{variant === "default" && (
-				<div className={social}>
-					<a href="https://bsky.app/profile/lenguarazfest.bsky.social" target="_blank" rel="noopener noreferrer">
-						<img src="/svg/bluesky.svg" alt="Síguenos en Bluesky" width="24" height="24" />
-					</a>
-					<a href="https://www.instagram.com/lenguarazfest" target="_blank" rel="noopener noreferrer">
-						<img src="/svg/instagram.svg" alt="Síguenos en Instagram" width="24" height="24" />
-					</a>
-					<button data-share>
-						<img src="/svg/share.svg" alt="Compartir" width="24" height="24" />
-					</button>
-				</div>
-			)}
+			<Social variant={variant} />
 		</nav>
 	);
 };

@@ -16,14 +16,15 @@ const program = css({
 });
 
 const twoColumn = css({
-	display: "grid",
-	gridTemplateColumns: ["1f", null, "1fr 1fr"],
-	gap: ["1.6rem", "2.4rem", "3.2rem"],
+	display: "flex",
+	flexDirection: ["column", "column", "row"],
+	justifyContent: "space-between",
+	gap: ["1.6rem", "2.4rem", "4.8rem"],
 	"& > div": {
 		display: "flex",
 		flexDirection: "column",
 		gap: "3.2rem",
-		maxWidth: "45rem"
+		maxWidth: "52rem"
 	}
 });
 

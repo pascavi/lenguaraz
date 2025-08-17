@@ -8,9 +8,10 @@ const Page = () => {
 				name="description"
 				content="En la primera edición del festival Lenguaraz la lengua invitada será el italiano, una de nuestras lenguas hermanas mediterráneas."
 			/>
+			<meta name="canonical" content="https://lenguarazfest.com/el-programa" />
 			<Header pathname="el-programa" />
-			<Content title="El programa">
-				<h1>Programa de la edición 2025</h1>
+			<Content title="El programa" variant="narrow">
+				<h1>Programa, edición 2025</h1>
 				<ProgramTwoColumns />
 			</Content>
 
