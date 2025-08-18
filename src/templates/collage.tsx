@@ -1,18 +1,18 @@
 import { css } from "@/styled-system/css";
 
 const IMAGES = [
-	{ src: "ferrante.jpg", alt: "Collage Image 1" },
-	{ src: "juliana.jpg", alt: "Collage Image 2" },
-	{ src: "mondejar.jpg", alt: "Collage Image 3" },
-	{ src: "incontro.jpg", alt: "Collage Image 10" },
-	{ src: "forti.jpg", alt: "Collage Image 4" },
-	{ src: "cenizas.jpg", alt: "Collage Image 5" },
-	{ src: "alemagna.jpg", alt: "Collage Image 6" },
-	{ src: "montalbano.jpg", alt: "Collage Image 8" },
-	{ src: "agnese.jpg", alt: "Collage Image 9" },
-	{ src: "traduccion.jpg", alt: "Collage Image 11" },
-	{ src: "lidiagarcia.jpg", alt: "Collage Image 7" },
-	{ src: "pietrantonio.jpg", alt: "Collage Image 12" }
+	{ src: "ferrante.webp", alt: "Collage Image 1" },
+	{ src: "juliana.webp", alt: "Collage Image 2" },
+	{ src: "mondejar.webp", alt: "Collage Image 3" },
+	{ src: "incontro.webp", alt: "Collage Image 10" },
+	{ src: "agnese.webp", alt: "Collage Image 9" },
+	{ src: "cenizas.webp", alt: "Collage Image 5" },
+	{ src: "alemagna.webp", alt: "Collage Image 6" },
+	{ src: "montalbano.webp", alt: "Collage Image 8" },
+	{ src: "forti.webp", alt: "Collage Image 4" },
+	{ src: "traduccion.webp", alt: "Collage Image 11" },
+	{ src: "lidiagarcia.webp", alt: "Collage Image 7" },
+	{ src: "pietrantonio.webp", alt: "Collage Image 12" }
 ];
 
 const collage = css({
@@ -39,11 +39,11 @@ const picture = css({
 
 export const Collage = () => {
 	return (
-		<div className={collage}>
+		<div className={collage} aria-hidden>
 			<div>
 				{IMAGES.map((image, index) => (
 					<picture key={index} className={picture}>
-						<img src={`/images/${image.src}`} alt={image.alt} width="1000" height="600" />
+						<img src={`/images/collage/${image.src}`} alt={image.alt} width="1000" height="600" />
 					</picture>
 				))}
 			</div>

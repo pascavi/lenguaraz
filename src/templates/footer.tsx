@@ -92,8 +92,8 @@ export const Footer = () => (
 					<div className={logos}>
 						<label>Colaboran:</label>
 						<div>
-							<img src="/logos/ministerio.jpg" alt="Logo 1" width="195" height="56" loading="lazy" />
-							<img src="/logos/murcia.svg" alt="Logo 2" width="128" height="56" loading="lazy" />
+							<img src="images/logos/ministerio.jpg" alt="Ministerio de Cultura" width="195" height="56" loading="lazy" />
+							<img src="images/logos/murcia.png" alt="Ayuntamiento de Murcia" width="128" height="56" loading="lazy" />
 						</div>
 					</div>
 				</div>

@@ -36,7 +36,7 @@ export const Social = ({ variant = "default" }: { variant?: "default" | "mobile"
 			<a href="https://bsky.app/profile/lenguarazfest.bsky.social" target="_blank" rel="noopener noreferrer">
 				<img src="/svg/bluesky.svg" alt="Síguenos en Bluesky" width="24" height="24" />
 			</a>
-			<button data-share>
+			<button data-share aria-label="Compartir en redes sociales">
 				<img src="/svg/share.svg" alt="Compartir" width="24" height="24" />
 			</button>
 		</div>

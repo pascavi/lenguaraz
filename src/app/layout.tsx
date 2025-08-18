@@ -7,7 +7,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	ReactDOM.preload("/fonts/poppins.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 	ReactDOM.preload("/fonts/blatant.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 	return (
-		<html lang="en">
+		<html lang="es">
 			<Globals>
 				<head>
 					<link rel="icon" href="/meta/favicon.ico" />

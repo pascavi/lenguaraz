@@ -1,5 +1,5 @@
 import { css, cva } from "@/styled-system/css";
-import { Wrapper, Logo, Birds, Navigation } from "@/components";
+import { Wrapper, Logo, Navigation } from "@/components";
 import Link from "next/link";
 
 const header = css({
@@ -11,12 +11,12 @@ const inner = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "4rem",
-	"& h1": {
+	"& p": {
 		fontFamily: "secondary",
 		fontSize: "clamp(1.8rem, 2.3vw, 2.3rem)",
 		textAlign: "center"
 	},
-	"& h1 b": {
+	"& p b": {
 		textShadow: "0 0 1px rgba(0, 0, 0, 0.5)"
 	}
 });
@@ -52,16 +52,21 @@ const logo = cva({
 const birds = css({
 	display: "flex",
 	flex: "1",
-	"& svg": {
+	"& picture": {
+		aspectRatio: "100 / 110.2",
+		display: "block",
 		width: ["75%", null, "50%", "42%"],
 		maxWidth: "26rem",
 		margin: "0 auto"
+	},
+	"& img": {
+		width: "100%",
+		height: "auto"
 	}
 });
 
 const nav = css({
 	width: [null, null, "25%", "28%"],
-
 	display: ["none", "none", "flex", "flex"],
 	"& nav, & div": {
 		display: ["none", "none", "none", "flex"],
@@ -112,7 +117,7 @@ const sticky = css({
 
 export const Header = ({ variant = "default", pathname }: { variant?: "default" | "home"; pathname?: string }) => {
 	return (
-		<header className={header}>
+		<header className={header} data-variant={variant}>
 			<div className={sticky} id="sticky-nav">
 				<Navigation variant="mobile" pathname={pathname} />
 			</div>
@@ -120,11 +125,18 @@ export const Header = ({ variant = "default", pathname }: { variant?: "default" 
 				<div className={inner}>
 					<div className={cols}>
 						<Link href="/" className={logo({ variant })}>
-							<Logo />
+							{variant === "home" && (
+								<h1>
+									<Logo />
+								</h1>
+							)}
+							{variant !== "home" && <Logo />}
 						</Link>
 						{variant === "home" && (
 							<div className={birds}>
-								<Birds />
+								<picture>
+									<img src="/svg/birds.svg" aria-labelledby="header-text" width="100" height="110" />
+								</picture>
 							</div>
 						)}
 						<button className={burger} aria-label="Abrir el menú" id="burger">
@@ -135,9 +147,9 @@ export const Header = ({ variant = "default", pathname }: { variant?: "default" 
 						</div>
 					</div>
 					{variant === "home" && (
-						<h1>
+						<p id="header-text">
 							Donde las lenguas <b>son casas abiertas</b>
-						</h1>
+						</p>
 					)}
 				</div>
 			</Wrapper>
