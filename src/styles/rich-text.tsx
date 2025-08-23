@@ -4,7 +4,7 @@ export const richText = css({
 	fontSize: "clamp(1.8rem, 2.67vw, 2rem)",
 	display: "flex",
 	flexDirection: "column",
-	gap: ["2.4rem", "3.2rem"],
+	gap: ["1.6rem", "3.2rem"],
 	"& h1": {
 		lineHeight: "1",
 		fontWeight: "600",

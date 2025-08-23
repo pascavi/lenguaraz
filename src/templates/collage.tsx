@@ -42,7 +42,7 @@ const picture = css({
 		transform: "scale(1.01)"
 	},
 	"&:hover img[data-overlay]": {
-		transition: "transform 0.5s ease-in-out 0.4s",
+		transition: "transform 0.5s ease-in-out 0.3s",
 		transform: "scale(0.9)"
 	},
 	"& .overlay": {

@@ -19,7 +19,7 @@ const twoColumn = css({
 	display: "flex",
 	flexDirection: ["column", "column", "row"],
 	justifyContent: "space-between",
-	gap: ["1.6rem", "2.4rem", "4.8rem"],
+	gap: ["2.4rem", "3.2rem", "4.8rem"],
 	"& > div": {
 		display: "flex",
 		flexDirection: "column",
@@ -31,32 +31,64 @@ const twoColumn = css({
 const day = css({
 	display: "flex",
 	flexDirection: "column",
-	gap: ["1.6rem", "1.6rem", "2.4rem"],
+	gap: ["2rem", "2rem", "2.4rem"],
 	"& h3": {
 		color: "primary.base",
 		fontSize: "clamp(1.8rem, 2.67vw, 2.2rem)",
 		fontWeight: "700",
 		fontFamily: "var(--font-blatant)",
 		lineHeight: "1"
-	},
-	"& h4": {
-		fontWeight: "700",
-		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)",
-		marginBottom: "0.8rem"
 	}
 });
 
-const Day = ({ date, events }: { date: string; events: { time: string; title: string; description: string; location?: string }[] }) => {
+const entry = css({
+	display: "flex",
+	flexDirection: "column",
+	gap: "0.8rem",
+	"& h4": {
+		fontWeight: "700",
+		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)"
+	},
+	"& p": {
+		display: "flex",
+		flexDirection: "column",
+		gap: "0.4rem"
+	},
+	"& a": {
+		display: "flex",
+		alignItems: "center",
+		gap: "0.6rem",
+		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)"
+	},
+	"& svg": {
+		display: "inline-block",
+		position: "relative",
+		top: "-0.1rem",
+		width: ["1.2rem", "1.6rem"],
+		height: ["1.2rem", "1.6rem"]
+	}
+});
+
+const Day = ({ date, events }: { date: string; events: { time: string; title: string; description: string; location?: string; map?: string }[] }) => {
 	return (
 		<div className={day}>
 			<h3>{date}</h3>
 			{events.map(event => (
-				<div key={event.title}>
+				<div key={event.title} className={entry}>
 					<h4>
 						{event.time} - {event.title}
 					</h4>
-					<p>{event.description}</p>
-					{event.location && <p>{event.location}</p>}
+					<p>
+						{event.description}
+						{event.location && (
+							<a href={event.map} target="_blank" rel="noopener noreferrer">
+								<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" aria-label="Localización">
+									<use href="/svg/icons.svg?1.2#location" />
+								</svg>
+								{event.location}
+							</a>
+						)}
+					</p>
 				</div>
 			))}
 		</div>
@@ -102,7 +134,8 @@ export const DATA = [
 				time: "10:30",
 				title: "Presentación de Lenguaraz.",
 				description: "Presentación del festival con Jorge Ollero Perán.",
-				location: "Centro Penitenciario de Murcia"
+				location: "Centro Penitenciario de Murcia",
+				map: "https://maps.app.goo.gl/epbHddnCyqXrLBTV9"
 			},
 			{
 				time: "11:00",

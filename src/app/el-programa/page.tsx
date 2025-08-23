@@ -1,4 +1,4 @@
-import { Header, Content, Footer, PromoBooks, ProgramTwoColumns } from "@/templates";
+import { Header, Content, Footer, PromoBooks, ProgramTwoColumns, RichText } from "@/templates";
 
 const Page = () => {
 	return (
@@ -10,8 +10,7 @@ const Page = () => {
 			/>
 			<meta name="canonical" content="https://lenguarazfest.com/el-programa" />
 			<Header pathname="el-programa" />
-			<Content title="El programa" variant="narrow">
-				<h1>Programa, edición 2025</h1>
+			<Content title="Programa, edición 2025" section="El programa" variant="narrow">
 				<ProgramTwoColumns />
 			</Content>
 

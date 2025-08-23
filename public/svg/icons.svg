@@ -12,4 +12,9 @@
     <symbol id="share" viewBox="0 0 58 58">
         <path fill="#b3545c" d="M42.4 39.3a9 9 0 0 0-4.8 1.4l-14-9.8a9 9 0 0 0 0-5l13.6-9.5a9 9 0 1 0-3.6-5.4l-14 9.7a9 9 0 1 0 0 15.3l14.2 10a9 9 0 1 0 8.6-6.7z"/>
     </symbol>
+
+    <symbol id="location" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 11c0 5.1-8 10-8 10s-8-4.9-8-10c0-4.5 3.9-8 8-8a8 8 0 0 1 8 8Z"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
+    </symbol>
 </svg>

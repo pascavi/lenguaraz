@@ -1,4 +1,4 @@
-import { Header, Content, Footer, PromoProgram, Books } from "@/templates";
+import { Header, Content, Footer, PromoProgram, Books, RichText } from "@/templates";
 
 const Page = () => {
 	return (
@@ -10,16 +10,17 @@ const Page = () => {
 			/>
 			<meta name="canonical" content="https://lenguarazfest.com/los-libros" />
 			<Header pathname="los-libros" />
-			<Content title="Los libros" variant="narrow">
-				<h1>Los libros del Lenguaraz</h1>
-				<p>
-					Hemos hecho una lista con todos los libros que se presentarán o de los que se hablará en el festival. Puedes conseguirlos en
-					nuestra librería de confianza,{" "}
-					<a href="https://libreriaeducania.com/" target="_blank" rel="noopener noreferrer">
-						Educania
-					</a>
-					, cerca del teatro Romea.
-				</p>
+			<Content title="Los libros del Lenguaraz" section="Los libros" variant="narrow">
+				<RichText>
+					<p>
+						Hemos hecho una lista con todos los libros que se presentarán o de los que se hablará en el festival. Puedes conseguirlos en
+						nuestra librería de confianza,{" "}
+						<a href="https://libreriaeducania.com/" target="_blank" rel="noopener noreferrer">
+							Educania
+						</a>
+						, cerca del teatro Romea.
+					</p>
+				</RichText>
 				<Books />
 			</Content>
 

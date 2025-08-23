@@ -6,3 +6,4 @@ export * from "./footer";
 export * from "./promo";
 export * from "./intro";
 export * from "./books";
+export * from "./rich-text";

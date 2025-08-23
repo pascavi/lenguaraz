@@ -32,7 +32,7 @@ const card = css({
 	"& b": {
 		fontFamily: "secondary",
 		fontSize: "clamp(1.6rem, 1.4vw, 2rem)",
-		color: "text.base"
+		color: "primary.base"
 	},
 	"& section": {
 		flexBasis: "82%",

@@ -1,47 +1,49 @@
-import { Header, Content, Footer, PromoBooks } from "@/templates";
+import { Header, Content, Footer, PromoBooks, RichText } from "@/templates";
 
 const Page = () => {
 	return (
 		<>
-			<title>Qué es Lenguaraz, festival de literatura y lenguas de Murcia</title>
+			<title>Qué es Lenguaraz, el festival de literatura en Murcia</title>
 			<meta
 				name="description"
 				content="Lenguaraz es un festival de literatura que tiene lugar en la ciudad de Murcia y celebra la riqueza de las lenguas."
 			/>
 			<meta name="canonical" content="https://lenguarazfest.com/el-festival" />
 			<Header pathname="el-festival" />
-			<Content title="El festival" variant="narrow">
-				<h1>¿Qué es Lenguaraz?</h1>
-				<p>
-					Es un festival de literatura en el que también trataremos temáticas como la lingüística, la traducción e interpretación, la
-					etnología del lenguaje, las ciencias de la comunicación, la política, el pensamiento y el arte.
-				</p>
-				<p>
-					Creemos firmemente que las lenguas han de ser puentes y no muros. Entendemos que las lenguas que existen en el mundo ensanchan
-					nuestra realidad y enriquecen nuestro pensamiento. Estamos convencidas de que, como dice el verso de{" "}
-					<a href="https://www.lacasaconlibros.com/" target="_blank" rel="noreferrer">
-						Luis Melgarejo
-					</a>
-					, «las lenguas son casas abiertas» y, por ello, <b>Lenguaraz</b> será un espacio de promoción de la lectura centrado en todo lo
-					que tenga que ver con las lenguas y las distintas formas de ver el mundo que nos da la diversidad lingüística.
-				</p>
-				<p>
-					<b>Lenguaraz</b> impulsará la lectura y la literatura organizando ponencias y diálogos con autores/as, editores/as, traductores,
-					críticos/as y otros/as profesionales del mundo del libro. Se promoverá la lectura en castellano pero también en las lenguas
-					cooficiales de España y, dado nuestro en foque plurilingüístico, acercaremos al público lector la riqueza de las ediciones
-					bilingües y de los mundo literarios más allá de nuestras fronteras.
-				</p>
-				<h2>Edición 2025, el italiano</h2>
-				<p>
-					Cada año, <b>Lenguaraz</b> tendrá una lengua invitada, de forma que ese universo lingüístico se convierta en el leitmotiv del
-					festival, entendiendo que la lectura y las letras españolas se enriquecen al ponerlas en relación con otras literaturas. En esta
-					primera edición, la lengua invitada será el italiano, una de nuestras lenguas hermanas mediterráneas, por lo que habrá ponencias
-					sobre el estado editorial en este idioma, diálogos con autores italianos y presentaciones de ediciones bilingües español-italiano.
-				</p>
-				<p>
-					<b>Lenguaraz</b> tendrá un fuerte compromiso social, que se manifestará en su esfuerzo de llevar la cultura allá donde más se
-					necesite.
-				</p>
+			<Content title="¿Qué es Lenguaraz?" section="El festival" variant="narrow">
+				<RichText>
+					<p>
+						Es un festival de literatura en el que también trataremos temáticas como la lingüística, la traducción e interpretación, la
+						etnología del lenguaje, las ciencias de la comunicación, la política, el pensamiento y el arte.
+					</p>
+					<p>
+						Creemos firmemente que las lenguas han de ser puentes y no muros. Entendemos que las lenguas que existen en el mundo ensanchan
+						nuestra realidad y enriquecen nuestro pensamiento. Estamos convencidas de que, como dice el verso de{" "}
+						<a href="https://www.lacasaconlibros.com/" target="_blank" rel="noreferrer">
+							Luis Melgarejo
+						</a>
+						, «las lenguas son casas abiertas» y, por ello, <b>Lenguaraz</b> será un espacio de promoción de la lectura centrado en todo
+						lo que tenga que ver con las lenguas y las distintas formas de ver el mundo que nos da la diversidad lingüística.
+					</p>
+					<p>
+						<b>Lenguaraz</b> impulsará la lectura y la literatura organizando ponencias y diálogos con autores/as, editores/as,
+						traductores, críticos/as y otros/as profesionales del mundo del libro. Se promoverá la lectura en castellano pero también en
+						las lenguas cooficiales de España y, dado nuestro en foque plurilingüístico, acercaremos al público lector la riqueza de las
+						ediciones bilingües y de los mundo literarios más allá de nuestras fronteras.
+					</p>
+					<h2>Edición 2025, el italiano</h2>
+					<p>
+						Cada año, <b>Lenguaraz</b> tendrá una lengua invitada, de forma que ese universo lingüístico se convierta en el leitmotiv del
+						festival, entendiendo que la lectura y las letras españolas se enriquecen al ponerlas en relación con otras literaturas. En
+						esta primera edición, la lengua invitada será el italiano, una de nuestras lenguas hermanas mediterráneas, por lo que habrá
+						ponencias sobre el estado editorial en este idioma, diálogos con autores italianos y presentaciones de ediciones bilingües
+						español-italiano.
+					</p>
+					<p>
+						<b>Lenguaraz</b> tendrá un fuerte compromiso social, que se manifestará en su esfuerzo de llevar la cultura allá donde más se
+						necesite.
+					</p>
+				</RichText>
 			</Content>
 			<PromoBooks />
 			<Footer />
