@@ -3,7 +3,7 @@ import { Header, Content, Footer, PromoProgram } from "@/templates";
 const Page = () => {
 	return (
 		<>
-			<title>El proyecto - Festival Lenguaraz, Murcia 5-9 Nov</title>
+			<title>Sobre el proyecto Lenguaraz</title>
 			<meta name="description" content="Sobre el proyecto del festival." />
 			<meta name="robots" content="noindex" />
 			<Header />
@@ -34,9 +34,15 @@ const Page = () => {
 					técnico y organizativo, así como a las instituciones y patrocinadores que apoyan la iniciativa.
 				</p>
 				<p>
-					La imagen gráfica del festival ha sido diseñada por <a href="https://malisia.net">Malisia</a>. El lema del festival, &quot;Donde
-					las lenguas son casas abiertas&quot;, procede de un poema de <a href="https://www.lacasaconlibros.com/">Luis Melgarejo</a>.
-					Agradecer especialmente su colaboración a los profesores de la Facultad de Letras de la Universidad de Murcia, así como al
+					La imagen gráfica del festival ha sido diseñada por{" "}
+					<a target="_blank" href="https://malisia.net" rel="noreferrer">
+						Malisia
+					</a>
+					. El lema del festival, &quot;Donde las lenguas son casas abiertas&quot;, procede de un poema de{" "}
+					<a target="_blank" href="https://www.lacasaconlibros.com/" rel="noreferrer">
+						Luis Melgarejo
+					</a>
+					. Agradecer especialmente su colaboración a los profesores de la Facultad de Letras de la Universidad de Murcia, así como al
 					departamento de italiano de la Escuela Oficial de Idiomas de Murcia.
 					<a id="aviso-legal" />
 				</p>
@@ -53,7 +59,7 @@ const Page = () => {
 
 				<h2>Privacidad</h2>
 				<p>
-					Esta web no utiliza no almacena datos personales de los usuarios. Esta web no hace uso de <i>cookies</i>.
+					Esta web no almacena datos personales de los usuarios. Esta web no hace uso de <i>cookies</i>.
 				</p>
 			</Content>
 			<PromoProgram />

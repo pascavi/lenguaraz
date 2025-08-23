@@ -3,7 +3,7 @@ import { Header, Content, Footer, PromoBooks } from "@/templates";
 const Page = () => {
 	return (
 		<>
-			<title>¿Qué es lenguaraz? - Festival Lenguaraz, Murcia 5-9 Nov</title>
+			<title>Qué es Lenguaraz, festival de literatura y lenguas de Murcia</title>
 			<meta
 				name="description"
 				content="Lenguaraz es un festival de literatura que tiene lugar en la ciudad de Murcia y celebra la riqueza de las lenguas."

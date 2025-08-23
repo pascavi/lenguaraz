@@ -4,10 +4,11 @@ const social = cva({
 	base: {
 		display: "flex",
 		gap: "1.6rem",
-		"& img": {
-			width: ["2.4rem", null, null, "3.2rem"]
+		"& svg": {
+			width: "2.4rem",
+			height: "2.4rem"
 		},
-		"& img:hover": {
+		"& svg:hover": {
 			filter: "brightness(0.8)"
 		},
 		"& button": {
@@ -19,8 +20,9 @@ const social = cva({
 			default: {},
 			mobile: {
 				gap: "1.4rem",
-				"& img": {
-					width: "2rem"
+				"& svg": {
+					width: "2rem",
+					height: "2rem"
 				}
 			}
 		}
@@ -30,14 +32,20 @@ const social = cva({
 export const Social = ({ variant = "default" }: { variant?: "default" | "mobile" }) => {
 	return (
 		<div className={social({ variant })}>
-			<a href="https://www.instagram.com/lenguarazfest" target="_blank" rel="noopener noreferrer">
-				<img src="/svg/instagram.svg" alt="Síguenos en Instagram" width="24" height="24" />
+			<a href="https://www.instagram.com/lenguarazfest" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+				<svg width="24" height="24">
+					<use href="/svg/icons.svg?1.1#instagram" />
+				</svg>
 			</a>
-			<a href="https://bsky.app/profile/lenguarazfest.bsky.social" target="_blank" rel="noopener noreferrer">
-				<img src="/svg/bluesky.svg" alt="Síguenos en Bluesky" width="24" height="24" />
+			<a href="https://bsky.app/profile/lenguarazfest.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Bluesky">
+				<svg width="24" height="24">
+					<use href="/svg/icons.svg?1.1#bluesky" />
+				</svg>
 			</a>
 			<button data-share aria-label="Compartir en redes sociales">
-				<img src="/svg/share.svg" alt="Compartir" width="24" height="24" />
+				<svg width="24" height="24">
+					<use href="/svg/icons.svg?1.1#share" />
+				</svg>
 			</button>
 		</div>
 	);

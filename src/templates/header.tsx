@@ -4,7 +4,8 @@ import Link from "next/link";
 
 const header = css({
 	background: "primary.light",
-	padding: "5.6rem 0 6.4rem"
+	padding: "5.6rem 0 7.2rem",
+	boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
 });
 
 const inner = css({
@@ -124,14 +125,16 @@ export const Header = ({ variant = "default", pathname }: { variant?: "default" 
 			<Wrapper>
 				<div className={inner}>
 					<div className={cols}>
-						<Link href="/" className={logo({ variant })}>
-							{variant === "home" && (
-								<h1>
-									<Logo />
-								</h1>
-							)}
-							{variant !== "home" && <Logo />}
-						</Link>
+						{variant === "home" && (
+							<h1 className={logo({ variant })}>
+								<Logo />
+							</h1>
+						)}
+						{variant !== "home" && (
+							<Link href="/" className={logo({ variant })}>
+								<Logo />
+							</Link>
+						)}
 						{variant === "home" && (
 							<div className={birds}>
 								<picture>
@@ -140,14 +143,16 @@ export const Header = ({ variant = "default", pathname }: { variant?: "default" 
 							</div>
 						)}
 						<button className={burger} aria-label="Abrir el menú" id="burger">
-							<img src="/svg/burger.svg" alt="Abrir el menú" width="24" height="24" />
+							<svg width="24" height="24">
+								<use href="/svg/icons.svg#burger" />
+							</svg>
 						</button>
 						<div className={nav}>
 							<Navigation pathname={pathname} />
 						</div>
 					</div>
 					{variant === "home" && (
-						<p id="header-text">
+						<p id="header-text" aria-hidden>
 							Donde las lenguas <b>son casas abiertas</b>
 						</p>
 					)}

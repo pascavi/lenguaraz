@@ -3,7 +3,7 @@ import { Header, Content, Footer, PromoProgram, Books } from "@/templates";
 const Page = () => {
 	return (
 		<>
-			<title>Los libros - Festival Lenguaraz, Murcia 5-9 Nov</title>
+			<title>Los libros del festival Lenguaraz 2025</title>
 			<meta
 				name="description"
 				content="Listado de los libros que presentaremos o comentaremos durante la primera edición del festival Lenguaraz."

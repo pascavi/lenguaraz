@@ -3,7 +3,7 @@ import { Header, Content, Footer, PromoBooks, ProgramTwoColumns } from "@/templa
 const Page = () => {
 	return (
 		<>
-			<title>Programa de la edición 2025 - Festival Lenguaraz, Murcia 5-9 Nov</title>
+			<title>Programa del Festival Lenguaraz, Murcia 5-9 Nov 2025</title>
 			<meta
 				name="description"
 				content="En la primera edición del festival Lenguaraz la lengua invitada será el italiano, una de nuestras lenguas hermanas mediterráneas."
