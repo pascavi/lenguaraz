@@ -21,5 +21,8 @@ export default defineConfig({
 	outdir: "styled-system",
 
 	// The theme configuration
-	theme: theme
+	theme: theme,
+
+	// The jsx framework to use
+	jsxFramework: "react"
 });

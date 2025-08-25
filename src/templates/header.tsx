@@ -69,6 +69,7 @@ const birds = css({
 const nav = css({
 	width: [null, null, "25%", "28%"],
 	display: ["none", "none", "flex", "flex"],
+	justifyContent: "flex-end",
 	"& nav, & div": {
 		display: ["none", "none", "none", "flex"],
 		justifyContent: "flex-end"

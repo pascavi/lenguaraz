@@ -67,7 +67,8 @@ const picture = css({
 
 export const Collage = () => {
 	return (
-		<section className={collage} aria-label={`Collage de fotografías de autores: ${AUTHORS_LIST}`}>
+		<div className={collage}>
+			<span className="visually-hidden">Participarán en el festival: {AUTHORS_LIST}</span>
 			<div aria-hidden>
 				{IMAGES.map((image, index) => (
 					<picture key={index} className={picture}>
@@ -80,6 +81,6 @@ export const Collage = () => {
 					</picture>
 				))}
 			</div>
-		</section>
+		</div>
 	);
 };

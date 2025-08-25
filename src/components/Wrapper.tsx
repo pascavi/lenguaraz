@@ -25,12 +25,20 @@ const inner = cva({
 type Props = {
 	children: React.ReactNode;
 	variant?: "default" | "narrow";
+	as?: "main" | "section" | "article" | "div";
 };
 
-export const Wrapper = ({ children, variant }: Props) => {
+export const Wrapper = ({ children, variant, as }: Props) => {
 	return (
-		<div className={wrapper}>
+		<ConditionalTag as={as}>
 			<div className={inner({ size: variant || "default" })}>{children}</div>
-		</div>
+		</ConditionalTag>
 	);
+};
+
+const ConditionalTag = ({ as, children }: { as?: Props["as"]; children: React.ReactNode }) => {
+	if (as === "main") return <main className={wrapper}>{children}</main>;
+	if (as === "section") return <section className={wrapper}>{children}</section>;
+	if (as === "article") return <article className={wrapper}>{children}</article>;
+	return <div className={wrapper}>{children}</div>;
 };
