@@ -30,7 +30,7 @@ export const Logo = ({ width = 100 }: { width?: number }) => {
 							Lenguaraz
 						</tspan>
 					</text>
-					<text x="100.403" y="49.191" fill="#b3545c" strokeWidth=".816" fontFamily="Blatant" fontSize="19.585" fontWeight="400">
+					<text x="100.403" y="49.191" fill="#cb4953" strokeWidth=".816" fontFamily="Blatant" fontSize="19.585" fontWeight="400">
 						<tspan x="100.403" y="49.191">
 							fest.com
 						</tspan>

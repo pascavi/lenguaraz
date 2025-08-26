@@ -1,13 +1,5 @@
 import { css } from "@/styled-system/css";
 import Link from "next/link";
-import { Social } from "@/components";
-
-const wrapper = css({
-	display: "flex",
-	flexDirection: ["row", null, null, "column"],
-	justifyContent: "space-between",
-	gap: ["1.6rem", "2rem"]
-});
 
 const links = css({
 	display: "flex",
@@ -27,27 +19,24 @@ const links = css({
 	}
 });
 
-export const Navigation = ({ variant = "default", pathname }: { variant?: "default" | "mobile"; pathname?: string }) => {
+export const Navigation = ({ pathname }: { pathname?: string }) => {
 	return (
-		<nav className={wrapper}>
-			<ul className={links}>
-				<li>
-					<Link href="/el-festival" className={pathname === "el-festival" ? "active" : ""}>
-						El festival
-					</Link>
-				</li>
-				<li>
-					<Link href="/el-programa" className={pathname === "el-programa" ? "active" : ""}>
-						El programa
-					</Link>
-				</li>
-				<li>
-					<Link href="/los-libros" className={pathname === "los-libros" ? "active" : ""}>
-						Los libros
-					</Link>
-				</li>
-			</ul>
-			<Social variant={variant} />
-		</nav>
+		<ul className={links}>
+			<li>
+				<Link href="/el-festival" className={pathname === "el-festival" ? "active" : ""}>
+					El festival
+				</Link>
+			</li>
+			<li>
+				<Link href="/el-programa" className={pathname === "el-programa" ? "active" : ""}>
+					El programa
+				</Link>
+			</li>
+			<li>
+				<Link href="/los-libros" className={pathname === "los-libros" ? "active" : ""}>
+					Los libros
+				</Link>
+			</li>
+		</ul>
 	);
 };

@@ -8,7 +8,7 @@ const program = css({
 
 	padding: ["5.6rem 0", "8rem 0"],
 	"& h2": {
-		color: "primary.base",
+		color: "primary.dark",
 		fontSize: "clamp(2.4rem, 3vw, 2.8rem)",
 		fontWeight: "700",
 		lineHeight: "1"
@@ -34,7 +34,7 @@ const day = css({
 	flexDirection: "column",
 	gap: ["2rem", "2rem", "2.4rem"],
 	"& h3": {
-		color: "primary.base",
+		color: "primary.dark",
 		fontSize: "clamp(1.9rem, 2.67vw, 2.2rem)",
 		fontWeight: "700",
 		fontFamily: "var(--font-blatant)",
@@ -53,10 +53,11 @@ const entry = css({
 	"& p": {
 		display: "flex",
 		flexDirection: "column",
-		gap: "0.4rem"
+		gap: "0.4rem",
+		alignItems: "flex-start"
 	},
 	"& a": {
-		display: "flex",
+		display: "inline-flex",
 		alignItems: "center",
 		gap: "0.6rem",
 		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)"
@@ -84,7 +85,7 @@ const Day = ({ date, events }: { date: string; events: { time: string; title: st
 						{event.location && (
 							<a href={event.map} target="_blank" rel="noopener noreferrer">
 								<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" aria-label="Localización">
-									<use href="/svg/icons.svg?1.2#location" />
+									<use href="/svg/icons.svg?1.3#location" />
 								</svg>
 								{event.location}
 							</a>

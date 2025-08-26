@@ -45,14 +45,17 @@ const content = css({
 });
 
 const button = css({
-	background: "primary.base",
-	color: "white",
+	borderColor: "primary.darker",
+	borderWidth: "2px",
+	color: "primary.darker",
 	padding: "0.8rem 1.6rem",
 	borderRadius: "0.8rem",
 	fontSize: "clamp(1.3rem, 1.4vw, 1.4rem)",
 	transition: "background 0.3s ease",
-	"&:hover": {
-		background: "primary.darker"
+	"&:hover, &:focus": {
+		borderColor: "primary.base",
+		background: "primary.base",
+		color: "white"
 	}
 });
 

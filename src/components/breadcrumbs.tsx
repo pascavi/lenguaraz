@@ -11,13 +11,13 @@ export const Breadcrumbs = ({ subpage }: { subpage?: string }) => {
 				fontSize: "1.4rem",
 				fontWeight: "600",
 				"& a": {
-					color: "primary.base",
+					color: "primary.dark",
 					textDecoration: "underline",
 					textUnderlineOffset: "0.5rem",
 					transition: "color 0.2s ease-in-out"
 				},
 				"& a:hover": {
-					color: "primary.darker"
+					color: "primary.base"
 				},
 				"& span": {
 					color: "text.light"

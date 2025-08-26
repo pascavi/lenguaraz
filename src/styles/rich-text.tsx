@@ -14,17 +14,17 @@ export const richText = css({
 	"& h2": {
 		lineHeight: "1",
 		fontFamily: "secondary",
-		color: "primary.base",
+		color: "primary.dark",
 		fontSize: "clamp(2.2rem, 2.5vw, 2.5rem)",
 		marginTop: ["0.8rem", "1.6rem"]
 	},
 
 	"& b": {
 		fontWeight: "600",
-		color: "primary.base"
+		color: "primary.dark"
 	},
 	"& a": {
-		color: "primary.base",
+		color: "primary.dark",
 		fontWeight: "600",
 		textDecoration: "underline",
 		textUnderlineOffset: "0.5rem",
@@ -36,6 +36,6 @@ export const richText = css({
 		transition: "color 0.2s ease-in-out"
 	},
 	"& a:hover": {
-		color: "primary.darker"
+		color: "primary.base"
 	}
 });

@@ -19,15 +19,15 @@ const AUTHORS_LIST = IMAGES.filter(i => i.overlay)
 	.map(i => i.alt)
 	.join(", ");
 
+const wrapper = css({
+	maxWidth: ["100%", null, null, null, "114.4rem"],
+	margin: "auto"
+});
+
 const collage = css({
-	margin: "auto",
-	maxWidth: "130rem",
-	"& > div": {
-		display: "flex",
-		flexWrap: "wrap",
-		width: "100%",
-		padding: ["0", "0", "0", "0 2.4rem"]
-	}
+	display: "flex",
+	flexWrap: "wrap",
+	width: "100%"
 });
 
 const picture = css({
@@ -67,9 +67,9 @@ const picture = css({
 
 export const Collage = () => {
 	return (
-		<div className={collage}>
-			<span className="visually-hidden">Participarán en el festival: {AUTHORS_LIST}</span>
-			<div aria-hidden>
+		<div className={wrapper}>
+			<span className="visually-hidden">{`Participarán en el festival: ${AUTHORS_LIST}`}</span>
+			<div aria-hidden className={collage}>
 				{IMAGES.map((image, index) => (
 					<picture key={index} className={picture}>
 						<img src={`/images/collage/${image.src}`} alt={image.alt} width="1000" height="600" data-overlay={image.overlay} />

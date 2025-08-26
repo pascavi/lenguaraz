@@ -10,17 +10,17 @@ const Page = () => {
 			/>
 			<meta name="canonical" content="https://lenguarazfest.com" />
 			<Header variant="home" />
-			<main>
-				<section aria-label="¿Qué es Lenguaraz?">
-					<Intro />
-				</section>
-				<section aria-label="Invitados destacados">
-					<Collage />
-				</section>
-				<section aria-label="Programa del festival">
-					<Program />
-				</section>
+
+			<main aria-label="Sobre Lenguaraz">
+				<Intro />
 			</main>
+			<section aria-label="Invitados destacados">
+				<Collage />
+			</section>
+			<section aria-label="Programa del festival">
+				<Program />
+			</section>
+
 			<PromoBooks />
 			<Footer />
 		</>

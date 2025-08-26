@@ -9,11 +9,10 @@ const intro = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "2.4rem",
-	textAlign: ["left", null, "justify"],
 	"& h2": {
 		fontFamily: "secondary",
 		lineHeight: "1",
-		color: "primary.base",
+		color: "primary.dark",
 		fontSize: "clamp(2rem, 2.4vw, 2.4rem)",
 		marginBottom: "0.8rem"
 	}
@@ -33,7 +32,7 @@ export const Intro = () => {
 					<p>
 						<b>Lenguaraz</b> va de literatura pero también de lingüística, traducción, interpretación, etnología, comunicación, política,
 						pensamiento y arte. Sí, Lenguaraz va de todo lo que tenga que ver con las lenguas, los idiomas, los lenguajes, las hablas, las
-						jergas, las palabras y las distintas formas de ver el mundo que nos da la diversidad lingüística.
+						palabras y las distintas formas de ver el mundo que nos da la diversidad lingüística.
 					</p>
 					<p>
 						Porque en Lenguaraz las lenguas son casas abiertas. <Link href="/el-festival">Leer más.</Link>

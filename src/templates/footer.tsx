@@ -13,23 +13,23 @@ const inner = css({
 	rowGap: "4rem",
 	justifyContent: "space-between",
 	fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)",
-	color: "primary.darker"
-});
-
-const menu = css({
-	display: "flex",
-	flexDirection: "column",
-	gap: "1.6rem",
+	color: "primary.darker",
 	"& a": {
 		fontSize: "clamp(1.5rem, 1.6vw, 1.6rem)",
 		fontWeight: "600",
 		color: "primary.darker"
 	},
 	"@media (hover: hover)": {
-		"& a:hover": {
-			filter: "brightness(0.8)"
+		"& a:hover, & button:hover": {
+			color: "primary.dark"
 		}
 	}
+});
+
+const menu = css({
+	display: "flex",
+	flexDirection: "column",
+	gap: "1.6rem"
 });
 
 const social = css({

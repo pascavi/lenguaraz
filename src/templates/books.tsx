@@ -13,7 +13,7 @@ const card = css({
 	display: "flex",
 	alignItems: "start",
 	gap: ["2rem", "4rem"],
-	"& h3": {
+	"& h2": {
 		fontSize: "clamp(1.8rem, 1.8vw, 2.2rem)",
 		fontWeight: "600"
 	},
@@ -32,7 +32,7 @@ const card = css({
 	"& b": {
 		fontFamily: "secondary",
 		fontSize: "clamp(1.6rem, 1.4vw, 2rem)",
-		color: "primary.base"
+		color: "primary.dark"
 	},
 	"& section": {
 		flexBasis: "82%",
@@ -51,7 +51,7 @@ const Book = ({ book }: { book: Book }) => {
 				<img src={book.image} alt="" width={book.imageWidth} height="640" />
 			</picture>
 			<section>
-				<h3>{book.title}</h3>
+				<h2>{book.title}</h2>
 				<p>
 					<b>{book.authorLabel}:</b> {book.author}
 				</p>
