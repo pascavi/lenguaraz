@@ -9,7 +9,6 @@ const Page = () => {
 			<Header />
 			<Content title="El proyecto" section="El proyecto" variant="narrow">
 				<RichText>
-					<h1>El proyecto</h1>
 					<p>
 						El festival Lenguaraz es una idea de Jorge Ollero desarrollada en colaboración con Ana Sánchez y la librería{" "}
 						<a href="https://www.educania.com">Educania</a> de La Fábrica de Ilusiones S.L. Este proyecto ha recibido una ayuda del

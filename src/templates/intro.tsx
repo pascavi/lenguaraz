@@ -9,6 +9,7 @@ const intro = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "2.4rem",
+	textAlign: ["left", null, "justify"],
 	"& h2": {
 		fontFamily: "secondary",
 		lineHeight: "1",

@@ -16,17 +16,14 @@ const inner = css({
 	color: "primary.darker"
 });
 
-const nav = css({
+const menu = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "1.6rem",
-	color: "primary.darker",
-	"& nav": {
-		display: "flex",
-		flexDirection: "column",
-		gap: "1.6rem",
+	"& a": {
 		fontSize: "clamp(1.5rem, 1.6vw, 1.6rem)",
-		fontWeight: "600"
+		fontWeight: "600",
+		color: "primary.darker"
 	},
 	"@media (hover: hover)": {
 		"& a:hover": {
@@ -74,25 +71,29 @@ export const Footer = () => (
 	<footer className={footer}>
 		<Wrapper>
 			<div className={inner}>
-				<div className={left}>
-					<div className={nav}>
+				<nav className={left} aria-label="Enlaces adicionales">
+					<div className={menu}>
 						<label>Más información:</label>
-						<nav>
-							<a href="/el-proyecto">Contacto</a>
-							<a href="/el-proyecto#agradecimientos">Agradecimientos</a>
-							<a href="/el-proyecto#aviso-legal">Aviso legal</a>
-						</nav>
+						<a href="/el-proyecto">Contacto</a>
+						<a href="/el-proyecto#agradecimientos">Agradecimientos</a>
+						<a href="/el-proyecto#aviso-legal">Aviso legal</a>
 					</div>
 					<div className={social}>
 						<label>Síguenos:</label>
 						<Social />
 					</div>
-				</div>
+				</nav>
 				<div className={right}>
 					<div className={logos}>
 						<label>Colaboran:</label>
 						<div>
-							<img src="images/logos/ministerio.jpg" alt="Ministerio de Cultura" width="195" height="56" loading="lazy" />
+							<img
+								src="images/logos/ministerio.jpg"
+								alt="Ministerio de Cultura, Gobiierno de España"
+								width="195"
+								height="56"
+								loading="lazy"
+							/>
 							<img src="images/logos/murcia.png" alt="Ayuntamiento de Murcia" width="128" height="56" loading="lazy" />
 						</div>
 					</div>

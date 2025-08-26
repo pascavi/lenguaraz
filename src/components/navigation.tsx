@@ -6,7 +6,7 @@ const wrapper = css({
 	display: "flex",
 	flexDirection: ["row", null, null, "column"],
 	justifyContent: "space-between",
-	gap: ["1.6rem", "2.4rem"]
+	gap: ["1.6rem", "2rem"]
 });
 
 const links = css({

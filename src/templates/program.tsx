@@ -5,7 +5,7 @@ const program = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "2.4rem",
-	fontSize: "clamp(1.6rem, 1.8vw, 1.8rem)",
+
 	padding: ["5.6rem 0", "8rem 0"],
 	"& h2": {
 		color: "primary.base",
@@ -20,6 +20,7 @@ const twoColumn = css({
 	flexDirection: ["column", "column", "row"],
 	justifyContent: "space-between",
 	gap: ["2.4rem", "3.2rem", "4.8rem"],
+	fontSize: "clamp(1.6rem, 1.8vw, 1.8rem)",
 	"& > div": {
 		display: "flex",
 		flexDirection: "column",
@@ -34,7 +35,7 @@ const day = css({
 	gap: ["2rem", "2rem", "2.4rem"],
 	"& h3": {
 		color: "primary.base",
-		fontSize: "clamp(1.8rem, 2.67vw, 2.2rem)",
+		fontSize: "clamp(1.9rem, 2.67vw, 2.2rem)",
 		fontWeight: "700",
 		fontFamily: "var(--font-blatant)",
 		lineHeight: "1"
@@ -47,7 +48,7 @@ const entry = css({
 	gap: "0.8rem",
 	"& h4": {
 		fontWeight: "700",
-		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)"
+		fontSize: "clamp(1.5rem, 1.6vw, 1.6rem)"
 	},
 	"& p": {
 		display: "flex",
@@ -222,7 +223,7 @@ export const DATA = [
 				time: "12:00",
 				title: "Todo empezó en Italia.",
 				description:
-					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Extrema derecha 2.0” y Enric Juliana, periodista y prologuista de la citada obra. Modera Elisa Reche, de El Diario.es Murcia."
+					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Extrema derecha 2.0” y Enric Juliana, periodista y prologuista de la citada obra. Modera: Elisa Reche, de El Diario.es Murcia."
 			},
 			{
 				time: "14:00",

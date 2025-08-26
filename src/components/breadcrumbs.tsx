@@ -4,6 +4,7 @@ import Link from "next/link";
 export const Breadcrumbs = ({ subpage }: { subpage?: string }) => {
 	return (
 		<nav
+			aria-label="Estás en"
 			className={css({
 				display: "flex",
 				gap: "0.8rem",
@@ -30,7 +31,7 @@ export const Breadcrumbs = ({ subpage }: { subpage?: string }) => {
 			})}
 		>
 			<Link href="/">Inicio</Link>
-			{subpage && <span>{subpage}</span>}
+			{subpage && <span aria-current="page">{subpage}</span>}
 		</nav>
 	);
 };

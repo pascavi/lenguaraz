@@ -1,4 +1,4 @@
-import { Header, Content, Footer, PromoBooks, ProgramTwoColumns, RichText } from "@/templates";
+import { Header, Content, Footer, PromoBooks, ProgramTwoColumns } from "@/templates";
 
 const Page = () => {
 	return (

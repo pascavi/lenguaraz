@@ -100,7 +100,7 @@ export const PromoProgram = () => {
 
 const Banner = ({ title, ctaUrl, ctaText, children }: { title: string; ctaUrl: string; ctaText: string; children?: React.ReactNode }) => {
 	return (
-		<div className={books}>
+		<aside className={books} aria-label={title}>
 			<Wrapper>
 				<div className={inner}>
 					<div className={image}>
@@ -118,6 +118,6 @@ const Banner = ({ title, ctaUrl, ctaText, children }: { title: string; ctaUrl: s
 					</div>
 				</div>
 			</Wrapper>
-		</div>
+		</aside>
 	);
 };

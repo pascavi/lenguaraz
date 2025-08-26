@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const header = css({
 	background: "primary.light",
-	padding: "5.6rem 0 7.2rem",
+	padding: "5.6rem 0 6.4rem",
 	boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
 });
 
@@ -69,6 +69,7 @@ const birds = css({
 const nav = css({
 	width: [null, null, "25%", "28%"],
 	display: ["none", "none", "flex", "flex"],
+	justifyContent: "flex-end",
 	"& nav, & div": {
 		display: ["none", "none", "none", "flex"],
 		justifyContent: "flex-end"

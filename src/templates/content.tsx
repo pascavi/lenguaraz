@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@/styled-system/css";
 import { Wrapper, Breadcrumbs } from "@/components";
 
-const main = css({
+const content = css({
 	padding: ["4.8rem 0 5.6rem", null, "6.4rem 0 7.2rem", "8rem 0 10.4rem"],
 	display: "flex",
 	flexDirection: "column",
@@ -29,14 +29,14 @@ type Props = {
 
 export const Content = ({ children, title, section, variant }: Props) => {
 	return (
-		<Wrapper variant={variant}>
-			<main className={main}>
+		<Wrapper variant={variant} as="main">
+			<div className={content}>
 				{section && <Breadcrumbs subpage={section} />}
 				<div className={inner}>
 					<h1>{title}</h1>
 					{children}
 				</div>
-			</main>
+			</div>
 		</Wrapper>
 	);
 };
