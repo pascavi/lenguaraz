@@ -27,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 0.5
+		},
+		{
+			url: "https://lenguarazfest.com/el-proyecto",
+			lastModified: new Date(),
+			changeFrequency: "weekly",
+			priority: 0.5
 		}
 	];
 }

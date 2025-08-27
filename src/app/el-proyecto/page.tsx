@@ -5,7 +5,6 @@ const Page = () => {
 		<>
 			<title>Sobre el proyecto Lenguaraz</title>
 			<meta name="description" content="Sobre el proyecto del festival." />
-			<meta name="robots" content="noindex" />
 			<Header />
 			<Content title="El proyecto" section="El proyecto" variant="narrow">
 				<RichText>
@@ -44,23 +43,6 @@ const Page = () => {
 						</a>
 						. Agradecer especialmente su colaboración a los profesores de la Facultad de Letras de la Universidad de Murcia, así como al
 						departamento de italiano de la Escuela Oficial de Idiomas de Murcia.
-						<a id="aviso-legal" />
-					</p>
-					<h2>Aviso legal</h2>
-					<p>
-						La Fábrica de ilusiones S.L. es titular del sitio web <i>lenguarazfest.com</i>. Los datos identificativos del titular son:{" "}
-						<br />
-						Nombre: La Fábrica de ilusiones S.L.
-						<br />
-						CIF: B42791962
-						<br />
-						Dirección: Calle Sociedad 10, Murcia, 30004.
-						<br />
-					</p>
-
-					<h2>Privacidad</h2>
-					<p>
-						Esta web no almacena datos personales de los usuarios. Esta web no hace uso de <i>cookies</i>.
 					</p>
 				</RichText>
 			</Content>

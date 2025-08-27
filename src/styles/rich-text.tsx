@@ -37,5 +37,10 @@ export const richText = css({
 	},
 	"& a:hover": {
 		color: "primary.base"
+	},
+	"& blockquote": {
+		borderLeft: "4px solid",
+		borderColor: "primary.base",
+		paddingLeft: "1.6rem"
 	}
 });

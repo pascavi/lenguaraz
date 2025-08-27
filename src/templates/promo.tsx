@@ -50,12 +50,19 @@ const button = css({
 	color: "primary.darker",
 	padding: "0.8rem 1.6rem",
 	borderRadius: "0.8rem",
-	fontSize: "clamp(1.3rem, 1.4vw, 1.4rem)",
+	fontSize: "1.4rem",
 	transition: "background 0.3s ease",
-	"&:hover, &:focus": {
+	"&:focus": {
 		borderColor: "primary.base",
 		background: "primary.base",
 		color: "white"
+	},
+	"@media (hover: hover)": {
+		"&:hover": {
+			borderColor: "primary.base",
+			background: "primary.base",
+			color: "white"
+		}
 	}
 });
 

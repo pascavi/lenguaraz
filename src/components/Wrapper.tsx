@@ -13,10 +13,10 @@ const inner = cva({
 	variants: {
 		size: {
 			default: {
-				maxWidth: "114.4rem"
+				maxWidth: "120rem"
 			},
 			narrow: {
-				maxWidth: "96rem"
+				maxWidth: "104rem"
 			}
 		}
 	}

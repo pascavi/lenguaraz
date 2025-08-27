@@ -99,7 +99,7 @@ const Day = ({ date, events }: { date: string; events: { time: string; title: st
 
 export const Program = () => {
 	return (
-		<Wrapper>
+		<Wrapper variant="narrow">
 			<div className={program} id="programa">
 				<h2>Programa, edición 2025</h2>
 				<ProgramTwoColumns />

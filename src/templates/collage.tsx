@@ -20,7 +20,7 @@ const AUTHORS_LIST = IMAGES.filter(i => i.overlay)
 	.join(", ");
 
 const wrapper = css({
-	maxWidth: ["100%", null, null, null, "114.4rem"],
+	maxWidth: ["100%", null, null, null, "120rem"],
 	margin: "auto"
 });
 

@@ -1,5 +1,6 @@
 import { css } from "@/styled-system/css";
 import { Wrapper, Social } from "@/components";
+import Link from "next/link";
 
 const footer = css({
 	backgroundColor: "primary.light",
@@ -74,9 +75,9 @@ export const Footer = () => (
 				<nav className={left} aria-label="Enlaces adicionales">
 					<div className={menu}>
 						<label>Más información:</label>
-						<a href="/el-proyecto">Contacto</a>
-						<a href="/el-proyecto#agradecimientos">Agradecimientos</a>
-						<a href="/el-proyecto#aviso-legal">Aviso legal</a>
+						<Link href="/el-proyecto">Contacto</Link>
+						<Link href="/el-proyecto#agradecimientos">Agradecimientos</Link>
+						<Link href="/la-web">Aviso legal</Link>
 					</div>
 					<div className={social}>
 						<label>Síguenos:</label>

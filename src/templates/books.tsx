@@ -19,7 +19,7 @@ const card = css({
 	},
 	"& picture": {
 		marginTop: "0.8rem",
-		flexBasis: "18%"
+		flexBasis: ["20%", null, "16%"]
 	},
 	"& img": {
 		width: "100%",
@@ -35,7 +35,12 @@ const card = css({
 		color: "primary.dark"
 	},
 	"& section": {
-		flexBasis: "82%",
+		flexBasis: ["80%", null, "84%"],
+		display: "flex",
+		flexDirection: "column",
+		gap: ["1.6rem", null, "2.4rem"]
+	},
+	"& section div": {
 		display: "flex",
 		flexDirection: "column",
 		gap: "0.8rem"
@@ -51,14 +56,15 @@ const Book = ({ book }: { book: Book }) => {
 				<img src={book.image} alt="" width={book.imageWidth} height="640" />
 			</picture>
 			<section>
-				<h2>{book.title}</h2>
-				<p>
-					<b>{book.authorLabel}:</b> {book.author}
-				</p>
-				<p>
-					<b>Editorial:</b> {book.editorial}
-				</p>
-
+				<div>
+					<h2>{book.title}</h2>
+					<p>
+						<b>{book.authorLabel}:</b> {book.author}
+					</p>
+					<p>
+						<b>Editorial:</b> {book.editorial}
+					</p>
+				</div>
 				<p>{book.description}</p>
 			</section>
 		</div>

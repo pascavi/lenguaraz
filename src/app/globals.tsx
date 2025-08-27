@@ -20,6 +20,10 @@ export const Globals = ({ children }: { children: React.ReactNode }) => {
 
 	// scroll to top
 	React.useEffect(() => {
+		if (window.location.hash) {
+			document.getElementById(window.location.hash.substring(1))?.scrollIntoView();
+			document.getElementById("sticky-nav")?.classList.remove("sticky-nav--open");
+		}
 		return () => {
 			if (!location.hash) window.scrollTo(0, 0);
 			document.getElementById("focus-root")?.focus();
