@@ -11,7 +11,7 @@ const links = css({
 		transition: "color 0.2s ease-in-out"
 	},
 	"& a:hover": {
-		color: "primary.darker"
+		color: "primary.dark"
 	},
 	"& a.active": {
 		textDecoration: "underline",

@@ -40,7 +40,7 @@ const eslintConfig = ts.config([
 		}
 	},
 	{
-		ignores: ["node_modules/**/*", "styled-system/**/*", "out/**/*", ".next/**/*"]
+		ignores: ["node_modules/**/*", "styled-system/**/*", "out/**/*", ".next/**/*", "next-env.d.ts"]
 	}
 ]);
 

@@ -1,4 +1,4 @@
-import { Header, Content, Footer, PromoBooks, RichText } from "@/templates";
+import { Header, Content, Footer, BooksPromo, RichText } from "@/templates";
 
 const Page = () => {
 	return (
@@ -35,9 +35,9 @@ const Page = () => {
 					<p>
 						Cada año, <b>Lenguaraz</b> tendrá una lengua invitada, de forma que ese universo lingüístico se convierta en el leitmotiv del
 						festival, entendiendo que la lectura y las letras españolas se enriquecen al ponerlas en relación con otras literaturas. En
-						esta primera edición, la lengua invitada será el italiano, una de nuestras lenguas hermanas mediterráneas, por lo que habrá
-						ponencias sobre el estado editorial en este idioma, diálogos con autores italianos y presentaciones de ediciones bilingües
-						español-italiano.
+						esta <a href="/el-programa">primera edición</a>, la lengua invitada será el italiano, una de nuestras lenguas hermanas
+						mediterráneas, por lo que habrá ponencias sobre el estado editorial en este idioma, diálogos con autores italianos y
+						presentaciones de ediciones bilingües español-italiano.
 					</p>
 					<p>
 						<b>Lenguaraz</b> tendrá un fuerte compromiso social, que se manifestará en su esfuerzo de llevar la cultura allá donde más se
@@ -45,7 +45,7 @@ const Page = () => {
 					</p>
 				</RichText>
 			</Content>
-			<PromoBooks />
+			<BooksPromo />
 			<Footer />
 		</>
 	);

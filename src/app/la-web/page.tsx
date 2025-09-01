@@ -1,4 +1,4 @@
-import { Header, Content, Footer, PromoProgram, RichText } from "@/templates";
+import { Header, Content, Footer, ProgramPromo, RichText } from "@/templates";
 
 const Page = () => {
 	return (
@@ -9,7 +9,6 @@ const Page = () => {
 			<Header />
 			<Content title="La web del Lenguaraz" section="La web del Lenguaraz" variant="narrow">
 				<RichText>
-					<h2>Aviso legal</h2>
 					<p>
 						La Fábrica de ilusiones S.L. es titular del sitio web <i>lenguarazfest.com</i>. Los datos identificativos del titular
 						son:{" "}
@@ -42,7 +41,7 @@ const Page = () => {
 					</p>
 				</RichText>
 			</Content>
-			<PromoProgram />
+			<ProgramPromo />
 			<Footer />
 		</>
 	);

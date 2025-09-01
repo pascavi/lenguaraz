@@ -24,12 +24,12 @@ const inner = css({
 		whiteSpace: "nowrap",
 		position: "relative"
 	},
-	"& p b": {
+	"& p span:nth-child(2)": {
 		display: "inline-block",
 		position: "relative",
 		left: "23%"
 	},
-	"& p span": {
+	"& p span:nth-child(1)": {
 		display: "inline-block",
 		position: "relative",
 		left: "-23%"
@@ -40,7 +40,7 @@ const cols = css({
 	display: "flex",
 	flexDirection: ["column", "column", "row"],
 	justifyContent: "space-between",
-	alignItems: ["center", "center", "flex-start"],
+	alignItems: ["center", null, "flex-start"],
 	gap: ["3.2rem", null, 0],
 	width: "100%"
 });
@@ -67,12 +67,14 @@ const logo = cva({
 const birds = css({
 	display: "flex",
 	flex: "1",
+	width: ["100%", null, "auto"],
 	"& picture": {
 		aspectRatio: "100 / 110.2",
 		display: "block",
 		width: ["75%", null, "50%", "42%"],
-		maxWidth: "26rem",
-		margin: "0 auto"
+		maxWidth: "20rem",
+		margin: "0 auto",
+		position: "relative"
 	},
 	"& img": {
 		width: "100%",
@@ -92,6 +94,9 @@ const nav = css({
 	},
 	"& div a, & div button": {
 		color: "primary.dark"
+	},
+	"& div a:hover,& div button:hover": {
+		color: "primary.darker"
 	}
 });
 
@@ -185,7 +190,7 @@ export const Header = ({ variant = "default", pathname }: { variant?: "default" 
 						</div>
 						{variant === "home" && (
 							<p id="header-text" aria-hidden>
-								<span>donde las lenguas</span> <b>son casas abiertas</b>
+								<span>donde las lenguas</span> <span>son casas abiertas</span>
 							</p>
 						)}
 					</div>

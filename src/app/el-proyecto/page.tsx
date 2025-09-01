@@ -1,4 +1,4 @@
-import { Header, Content, Footer, PromoProgram, RichText } from "@/templates";
+import { Header, Content, Footer, ProgramPromo, RichText } from "@/templates";
 
 const Page = () => {
 	return (
@@ -46,7 +46,7 @@ const Page = () => {
 					</p>
 				</RichText>
 			</Content>
-			<PromoProgram />
+			<ProgramPromo />
 			<Footer />
 		</>
 	);

@@ -8,9 +8,6 @@ const social = cva({
 			width: "2.4rem",
 			height: "2.4rem"
 		},
-		"& svg:hover": {
-			filter: "brightness(0.8)"
-		},
 		"& button": {
 			cursor: "pointer"
 		}

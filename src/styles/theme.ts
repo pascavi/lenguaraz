@@ -14,7 +14,7 @@ export const theme = {
 				base: { value: "#f0707d" },
 				light: { value: "#f6a2b0" },
 				lighter: { value: "#fac7cc" },
-				dark: { value: "#cb4953" },
+				dark: { value: "#bf404a" },
 				darker: { value: "#7a2e33" }
 			},
 			tertiary: {
