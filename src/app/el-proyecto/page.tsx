@@ -20,9 +20,7 @@ const Page = () => {
 					<p>
 						Puedes ponerte en contacto con nostros a traves del email{" "}
 						<b>
-							<a href="mailto:&#104;&#111;&#108;&#097;&#064;&#108;&#101;&#110;&#103;&#117;&#097;&#114;&#097;&#122;&#102;&#101;&#115;&#116;&#046;&#099;&#111;&#109;">
-								&#104;&#111;&#108;&#097;&#064;&#108;&#101;&#110;&#103;&#117;&#097;&#114;&#097;&#122;&#102;&#101;&#115;&#116;&#046;&#099;&#111;&#109;
-							</a>
+							<a href="mailto:lenguarazfest@gmail.com">lenguarazfest@gmail.com</a>
 						</b>
 						.
 						<a id="agradecimientos" />

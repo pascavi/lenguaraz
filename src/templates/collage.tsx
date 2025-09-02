@@ -3,16 +3,16 @@ import { css } from "@/styled-system/css";
 const IMAGES = [
 	{ src: "ferrante.webp", alt: "Fenómeno ferrante" },
 	{ src: "juliana.webp", alt: "Enric Juliana", overlay: true },
-	{ src: "mondejar.webp", alt: "Lola López Mondejar", overlay: true },
-	{ src: "incontro.webp", alt: "Il libro dell'incontro" },
-	{ src: "agnese.webp", alt: "Agnese Moro", overlay: true },
-	{ src: "cenizas.webp", alt: "Las cenizas de Gramci" },
-	{ src: "alemagna.webp", alt: "Beatrice Alemagna", overlay: true },
-	{ src: "montalbano.webp", alt: "El comisario Montalbano" },
-	{ src: "forti.webp", alt: "Steven Forti", overlay: true },
-	{ src: "traduccion.webp", alt: "Itzulpena-Traducción" },
+	{ src: "patrizi.webp", alt: "Patrizia Patrizi", overlay: true },
+	{ src: "montagnana.webp", alt: "Alessandro Montagnana", overlay: true },
 	{ src: "lidiagarcia.webp", alt: "Lidia García", overlay: true },
-	{ src: "pietrantonio.webp", alt: "Donatella di Pietrantonio", overlay: true }
+	{ src: "incontro.webp", alt: "Il libro dell'incontro" },
+	{ src: "mondejar.webp", alt: "Lola López Mondejar", overlay: true },
+	{ src: "cenizas.webp", alt: "Las cenizas de Gramci" },
+	{ src: "forti.webp", alt: "Steven Forti", overlay: true },
+	{ src: "hernandez.webp", alt: "Miguel Ángel Hernández", overlay: true },
+	{ src: "traduccion.webp", alt: "Itzulpena-Traducción" },
+	{ src: "colonna.webp", alt: "Valentina Colonna", overlay: true }
 ];
 
 const AUTHORS_LIST = IMAGES.filter(i => i.overlay)
@@ -42,12 +42,13 @@ const picture = css({
 		transform: "scale(1.01)"
 	},
 	"&:hover img[data-overlay]": {
-		transition: "transform 0.5s ease-in-out 0.3s",
-		transform: "scale(0.9)"
+		transition: "transform 0.4s ease-in-out 0.2s, filter 0.4s ease-in-out 0.2s",
+		transform: "scale(0.9)",
+		filter: "grayscale(100%) brightness(1.1) contrast(1.2)"
 	},
 	"& .overlay": {
 		opacity: "0",
-		transition: "opacity 0.5s ease-in-out",
+		transition: "opacity 0.4s ease-in-out",
 		position: "absolute",
 		inset: "0",
 		backgroundImage: "url(/svg/collage-overlay.svg)",

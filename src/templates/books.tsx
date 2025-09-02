@@ -82,26 +82,26 @@ export const Books = () => {
 };
 
 const DATA = [
-	{
-		title: "Novelas del inspector Montalbano",
-		author: "Andrea Camilleri",
-		authorLabel: "Autor",
-		editorial: "Salamandra",
-		description:
-			"Serie de novelas policíacas protagonizadas por Salvo Montalbano, comisario de policía en la imaginaria ciudad costera de Vigàta, en Sicilia. La serie es conocida por su mezcla de intriga, ironía, crítica social, y un profundo retrato de la sociedad siciliana contemporánea. Los primeros casos es una recopilación de las primeras historias del inspector Montalbano.",
-		image: "/images/libros/montalbano.webp",
-		imageWidth: 419
-	},
-	{
-		title: "Novelas del detective Pepe Carvalho",
-		author: "Manuel Vázquez Montalbán",
-		authorLabel: "Autor",
-		editorial: "Planeta, Ediciones B y Galaxia Gutenberg",
-		description:
-			"Las novelas del detective Pepe Carvalho son una serie de relatos que combinan la intriga policial con una aguda crítica social. Carvalho, un detective privado con un enfoque poco convencional, se enfrenta a diversos casos en la Barcelona de los años 70 y 80.",
-		image: "/images/libros/montalban.webp",
-		imageWidth: 424
-	},
+	// {
+	// 	title: "Novelas del inspector Montalbano",
+	// 	author: "Andrea Camilleri",
+	// 	authorLabel: "Autor",
+	// 	editorial: "Salamandra",
+	// 	description:
+	// 		"Serie de novelas policíacas protagonizadas por Salvo Montalbano, comisario de policía en la imaginaria ciudad costera de Vigàta, en Sicilia. La serie es conocida por su mezcla de intriga, ironía, crítica social, y un profundo retrato de la sociedad siciliana contemporánea. Los primeros casos es una recopilación de las primeras historias del inspector Montalbano.",
+	// 	image: "/images/libros/montalbano.webp",
+	// 	imageWidth: 419
+	// },
+	// {
+	// 	title: "Novelas del detective Pepe Carvalho",
+	// 	author: "Manuel Vázquez Montalbán",
+	// 	authorLabel: "Autor",
+	// 	editorial: "Planeta, Ediciones B y Galaxia Gutenberg",
+	// 	description:
+	// 		"Las novelas del detective Pepe Carvalho son una serie de relatos que combinan la intriga policial con una aguda crítica social. Carvalho, un detective privado con un enfoque poco convencional, se enfrenta a diversos casos en la Barcelona de los años 70 y 80.",
+	// 	image: "/images/libros/montalban.webp",
+	// 	imageWidth: 424
+	// },
 	{
 		title: "Il libro dell'incontro",
 		author: "Guido Bertagna, Adolfo Ceretti, Claudia Mazzucato",
@@ -138,7 +138,7 @@ const DATA = [
 		authorLabel: "Autor",
 		editorial: "Llibres de l’Encobert",
 		description:
-			"Estiu del 37 es una novela que se sitúa en el contexto de la Guerra Civil Española, explorando las vivencias de sus personajes durante un verano crucial. A través de una prosa evocadora, Casanova retrata la complejidad de las relaciones humanas en tiempos de conflicto.",
+			"Estiu del 37 será un álbum con una selección de las más de 600 fotografías que Arturo y Julia realizaron en la retaguardia de la guerra durante el verano de 1937 y que hemos revelado y restaurado después de 80 años.",
 		image: "/images/libros/estiu.webp",
 		imageWidth: 424
 	},
@@ -173,13 +173,13 @@ const DATA = [
 		imageWidth: 421
 	},
 	{
-		title: "Literatura infantil de Betrice Alemagna",
-		author: "Betrice Alemagna",
-		authorLabel: "Autora",
-		editorial: "Eccomi, A buen paso, Combel",
+		title: "Literatura infantil de Alessandro Montagnana",
+		author: "Alessandro Montagnana",
+		authorLabel: "Autor",
+		editorial: "NubeOcho",
 		description:
-			"Los libros de Beatrice Alemagna son álbumes ilustrados que se destacan por su sensibilidad, creatividad visual y temas que celebran la infancia, la curiosidad y la identidad. Con un estilo artístico único y textos poéticos, sus obras invitan a mirar el mundo con asombro y empatía.",
-		image: "/images/libros/alemagna.webp",
+			"Mandril, El viaje de Candela, La Roca de Milo y Carlos, Corazón de invierno,... los libros infantiles de Alessandro Montagna abordan temas como la amistad, la aventura y la búsqueda de identidad, todo ello a través de narrativas visuales cautivadoras.",
+		image: "/images/libros/montagnana.webp",
 		imageWidth: 475
 	},
 	{
@@ -193,13 +193,13 @@ const DATA = [
 		imageWidth: 421
 	},
 	{
-		title: "Novelas de Donatella di Pietrantonio",
-		author: "Donatella di Pietrantonio",
+		title: "Poesía de Valentina Colonna",
+		author: "Valentina Colonna",
 		authorLabel: "Autora",
-		editorial: "Duomo ediciones",
+		editorial: "Nino Aragno Editore, Manni",
 		description:
-			"Las novelas de Donatella di Pietrantonio exploran las complejidades de las relaciones humanas y la búsqueda de identidad en un mundo en constante cambio. Su prosa íntima y evocadora invita a los lectores a reflexionar sobre sus propias experiencias y emociones, destacando su estilo sobrio y potente. Sú última libro se llama 'La edad frágil'.",
-		image: "/images/libros/pietrantonio.webp",
+			"Poesía en italiano. Dimenticato suono, La cadenza sospesa,... la obra de Valentina Colonna se caracteriza por su musicalidad y su capacidad para evocar emociones profundas a través de imágenes vívidas.",
+		image: "/images/libros/colonna.webp",
 		imageWidth: 422
 	},
 	{

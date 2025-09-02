@@ -7,7 +7,7 @@ const Page = () => {
 			<meta name="description" content="Sobre la web del Lenguaraz." />
 			<meta name="robots" content="noindex" />
 			<Header />
-			<Content title="La web del Lenguaraz" section="La web del Lenguaraz" variant="narrow">
+			<Content title="La web del Lenguaraz" section="Aviso legal" variant="narrow">
 				<RichText>
 					<p>
 						La Fábrica de ilusiones S.L. es titular del sitio web <i>lenguarazfest.com</i>. Los datos identificativos del titular
@@ -24,9 +24,7 @@ const Page = () => {
 					<p>
 						Puedes ponerte en contacto con nostros a traves del email{" "}
 						<b>
-							<a href="mailto:&#104;&#111;&#108;&#097;&#064;&#108;&#101;&#110;&#103;&#117;&#097;&#114;&#097;&#122;&#102;&#101;&#115;&#116;&#046;&#099;&#111;&#109;">
-								&#104;&#111;&#108;&#097;&#064;&#108;&#101;&#110;&#103;&#117;&#097;&#114;&#097;&#122;&#102;&#101;&#115;&#116;&#046;&#099;&#111;&#109;
-							</a>
+							<a href="mailto:lenguarazfest@gmail.com">lenguarazfest@gmail.com</a>
 						</b>
 						.
 					</p>

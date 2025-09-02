@@ -1,5 +1,6 @@
 import { Wrapper } from "@/components";
 import { css } from "@/styled-system/css";
+import React from "react";
 
 const program = css({
 	display: "flex",
@@ -50,7 +51,7 @@ const entry = css({
 		fontWeight: "700",
 		fontSize: "clamp(1.5rem, 1.6vw, 1.6rem)"
 	},
-	"& p": {
+	"& div": {
 		display: "flex",
 		flexDirection: "column",
 		gap: "0.4rem",
@@ -76,21 +77,21 @@ const Day = ({ date, events }: { date: string; events: { time: string; title: st
 		<div className={day}>
 			<h3>{date}</h3>
 			{events.map(event => (
-				<div key={event.title} className={entry}>
+				<div key={`${event.time},${event.title}`} className={entry}>
 					<h4>
 						{event.time} - {event.title}
 					</h4>
-					<p>
-						{event.description}
-						{event.location && (
-							<a href={event.map} target="_blank" rel="noopener noreferrer">
-								<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" aria-label="Localización">
-									<use href="/svg/icons.svg?1.3#location" />
-								</svg>
-								{event.location}
-							</a>
-						)}
-					</p>
+
+					<div dangerouslySetInnerHTML={{ __html: "<p>" + event.description.split("\n").join("</p><p>") + "</p>" }} />
+
+					{event.location && (
+						<a href={event.map} target="_blank" rel="noopener noreferrer">
+							<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" aria-label="Localización">
+								<use href="/svg/icons.svg?1.3#location" />
+							</svg>
+							{event.location}
+						</a>
+					)}
 				</div>
 			))}
 		</div>
@@ -130,64 +131,65 @@ export const ProgramTwoColumns = () => {
 
 export const DATA = [
 	{
-		date: "Miércoles, 5 de noviembre",
+		date: "Miércoles 5: prólogo.",
 		events: [
 			{
-				time: "10:30",
+				time: "10:00",
 				title: "Presentación de Lenguaraz.",
 				description: "Presentación del festival con Jorge Ollero Perán.",
 				location: "Centro Penitenciario de Murcia",
 				map: "https://maps.app.goo.gl/epbHddnCyqXrLBTV9"
 			},
 			{
-				time: "11:00",
-				title: "“Montalbán/Montalbano”",
+				time: "10:30",
+				title: "“Escribir la Utopía”",
 				description:
-					"Diálogo sobre la literatura policiaca de Manuel Vázquez Montalbán y de Andrea Camilleri. Contaremos con autores, editores o críticos literarios. Modera: María Ángeles Carnacea."
+					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Jorge Ollero Perán. Actividad del aula de cultura de Solidarios para el Desarrollo."
 			},
 			{
 				time: "18:00",
 				title: "“Escribir la Utopía”",
 				description:
-					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos restaurativos entre víctimas de violencia armada y sus autores. Con Agnese Moro y Patricia Patrizi. Modera: Jorge Ollero Perán."
+					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Lola López Mondéjar. Modera: Jorge Ollero Perán."
 			}
 		]
 	},
 	{
-		date: "Jueves, 6 de noviembre",
+		date: "Jueves 6: presentación.",
 		events: [
 			{
-				time: "17:30",
+				time: "17:00",
 				title: "Inauguración de Lenguaraz",
 				description: "Inauguración del festival con la presencia de autoridades y organizadores. Con Ana Sánchez y Jorge Ollero."
 			},
 			{
-				time: "18:00",
+				time: "17:30",
 				title: "“Narrar con liberación”",
 				description:
-					"Diálogo sobre las narrativas italianas. Con Sandra Ollo (Editorial Acantilado) y Lola López Mondéjar. Modera: Manuel Madrid."
+					"Diálogo sobre las narrativas italianas. Con Sandra Ollo (Editorial Acantilado) y Lola López Mondéjar, escritora y psicoanalista.\nModera: Manuel Madrid, Jefe de área de Culturas en La Verdad."
 			},
 			{
 				time: "19:00",
 				title: "Diálogo sobre la lengua italiana",
-				description: "Con Pedro Luis Ladrón de Guevara Mellado y María Belén Hernández González de la Universidad de Murcia."
+				description:
+					"Con Antonio Candeloro, de la Sociedad Dante Alighieri y profesor en la UCAM, y María Belén Hernández González, catedrática de filología Italiana en la UMU.\nModera: Daniela Valencia, directora de Vibrante Comunicación."
 			}
 		]
 	},
 	{
-		date: "Viernes, 7 de noviembre",
+		date: "Viernes 7: planteamiento.",
 		events: [
 			{
 				time: "17:00",
 				title: "Ediciones bilingües (Nuestras lenguas)",
 				description:
-					"Presentaremos los libros “Itzulpena/Traducción” (euskera-castellano), de Ángel Erro y “Estiu del 37” (valenciano-castellano), de la editorial Llibres de l’Encobert. Con Angel Erro y José Lopez Camarillas. Modera: Constanza Sánchez."
+					"Presentaremos los libros “Itzulpena/Traducción” (euskera-castellano), de Ángel Erro, editado por el Gobierno de Navarra y “Estiu del 37” (valenciano-castellano), de la editorial Llibres de l’Encobert.\nCon Ángel Erro, poeta y traductor, y José Lopez Camarillas de la Ed. Llibres de l’Encobert. Modera: Constanza Sánchez, politóloga."
 			},
 			{
 				time: "19:00",
 				title: "Ediciones bilingües (Italiano- Castellano)",
 				description:
-					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Educania y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros. Con Jorge Martí y Juan Carlos Abril. Modera: Encarnación Esteban Bernabé."
+					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Books y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros.\nCon Jorge Martí, editor en Blackie Books, y Juan Carlos Abril, poeta y traductor. Modera: Isidro Cantero, abogado."
 			},
 			{
 				time: "21:00",
@@ -197,34 +199,34 @@ export const DATA = [
 		]
 	},
 	{
-		date: "Sábado, 8 de noviembre",
+		date: "Sábado 8: nudo.",
 		events: [
 			{
 				time: "11:00",
 				title: "Literatura infantil italiana",
-				description: "Encuentro con la autora Betrice Alemagna y María Rubio de la EOI de Murcia."
+				description: "Encuentro y cuentacuentos con Alessandro Montagnana, autor de libros como “El viaje de Candela” y “Mandril”."
 			},
 			{
-				time: "13:00",
+				time: "17:30",
 				title: "“Fenómeno Ferrante”",
 				description:
-					"Diálogo sobre el fenómeno literario de Elena Ferrante. Con María Fasce, editora de Ferrante y María Reyes Ferrer de la UMU."
+					"Diálogo sobre el fenómeno literario de Elena Ferrante.\nCon Cecilia Fillipeto, traductora de Elena Ferrante, y María Reyes Ferrer, profesora de la UMU."
 			},
 			{
 				time: "19:00",
 				title: "Encuentro literario.",
-				description: "Diálogo entre Miguel Ángel Hernández y Donatella di Pietrantonio."
+				description: "Diálogo entre Miguel Ángel Hernández (escritor y profesor) y Valentina Colonna (poeta y música).\nModera: Ana Sánchez"
 			}
 		]
 	},
 	{
-		date: "Domingo, 9 de noviembre",
+		date: "Domingo 9: desenlace.",
 		events: [
 			{
 				time: "12:00",
 				title: "Todo empezó en Italia.",
 				description:
-					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Extrema derecha 2.0” y Enric Juliana, periodista y prologuista de la citada obra. Modera: Elisa Reche, de El Diario.es Murcia."
+					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Democracias en extinción” y “Extrema derecha 2.0”, y Enric Juliana, periodista y prologuista de la última obra.\nModera: Elisa Reche, de elDiario.es Murcia."
 			},
 			{
 				time: "14:00",
