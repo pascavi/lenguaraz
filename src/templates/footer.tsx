@@ -50,10 +50,10 @@ const logos = css({
 	"& > div": {
 		display: "flex",
 		flexWrap: "wrap",
-		gap: "3.2rem"
+		gap: "1.6rem"
 	},
 	"& img": {
-		height: "5.6rem",
+		height: "6.4rem",
 		width: "auto"
 	}
 });
@@ -94,8 +94,16 @@ export const Footer = () => (
 								width="195"
 								height="56"
 								loading="lazy"
+								title="Ministerio de Cultura, Gobiierno de España"
 							/>
-							<img src="images/logos/murcia.png" alt="Ayuntamiento de Murcia" width="128" height="56" loading="lazy" />
+							<img
+								src="images/logos/lectura_infinita.png"
+								alt="Pacto por la lectura"
+								title="Pacto por la lectura"
+								width="157"
+								height="150"
+								loading="lazy"
+							/>
 						</div>
 					</div>
 				</div>
