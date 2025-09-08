@@ -1,5 +1,5 @@
 import { css } from "@/styled-system/css";
-import { Wrapper, Social } from "@/components";
+import { Wrapper } from "@/components";
 import Link from "next/link";
 
 const footer = css({
@@ -11,7 +11,7 @@ const inner = css({
 	display: "flex",
 	flexDirection: "row",
 	flexWrap: "wrap",
-	rowGap: "4rem",
+	gap: "4rem",
 	justifyContent: "space-between",
 	fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)",
 	color: "primary.darker",
@@ -27,62 +27,62 @@ const inner = css({
 	}
 });
 
-const menu = css({
-	display: "flex",
-	flexDirection: "column",
-	gap: "1.6rem"
-});
-
-const social = css({
-	display: "flex",
-	flexDirection: "column",
-	gap: "1.6rem",
-	"& img": {
-		width: "2.4rem",
-		height: "2.4rem"
-	}
-});
-
-const logos = css({
-	display: "flex",
-	flexDirection: "column",
-	gap: "1.6rem",
-	"& > div": {
-		display: "flex",
-		flexWrap: "wrap",
-		gap: "3.2rem"
-	},
-	"& img": {
-		height: "5.6rem",
-		width: "auto"
-	}
-});
-
 const left = css({
 	display: "flex",
-	gap: "5.6rem",
-	minWidth: "32rem"
+	flexDirection: "column",
+	lineHeight: "3.6rem",
+	"& ul": {
+		columns: 2,
+		columnGap: ["4rem", null, null, "6.4rem"]
+	}
 });
 
 const right = css({
 	display: "flex"
 });
 
+const logos = css({
+	display: "flex",
+	flexDirection: "column",
+	gap: "0.8rem",
+	lineHeight: "4rem",
+	"& > div": {
+		display: "flex",
+		flexWrap: "wrap",
+		gap: "1.6rem"
+	},
+	"& img": {
+		height: ["5.6rem", null, null, "6.4rem"],
+		width: "auto"
+	}
+});
+
 export const Footer = () => (
 	<footer className={footer}>
 		<Wrapper>
 			<div className={inner}>
-				<nav className={left} aria-label="Enlaces adicionales">
-					<div className={menu}>
-						<label>Más información:</label>
-						<Link href="/el-proyecto">Contacto</Link>
-						<Link href="/el-proyecto#agradecimientos">Agradecimientos</Link>
-						<Link href="/la-web">Aviso legal</Link>
-					</div>
-					<div className={social}>
-						<label>Síguenos:</label>
-						<Social />
-					</div>
+				<nav className={left} aria-labelledby="footer-more-info">
+					<label id="footer-more-info">Más información:</label>
+					<ul>
+						<li>
+							<Link href="/el-proyecto">Contacto</Link>
+						</li>
+						<li>
+							<Link href="/el-proyecto#agradecimientos">Agradecimientos</Link>
+						</li>
+						<li>
+							<Link href="/la-web">Aviso legal</Link>
+						</li>
+						<li>
+							<Link href="https://www.facebook.com/lenguarazfest">Facebook</Link>
+						</li>
+						<li>
+							<Link href="https://www.instagram.com/lenguarazfest">Instagram</Link>
+						</li>
+						<li>
+							<Link href="https://bsky.app/profile/lenguarazfest">Bluesky</Link>
+						</li>
+					</ul>
 				</nav>
 				<div className={right}>
 					<div className={logos}>
@@ -94,8 +94,16 @@ export const Footer = () => (
 								width="195"
 								height="56"
 								loading="lazy"
+								title="Ministerio de Cultura, Gobiierno de España"
 							/>
-							<img src="images/logos/murcia.png" alt="Ayuntamiento de Murcia" width="128" height="56" loading="lazy" />
+							<img
+								src="images/logos/lectura_infinita.png"
+								alt="Pacto de estado por la lectura"
+								title="Pacto de estado por la lectura"
+								width="157"
+								height="150"
+								loading="lazy"
+							/>
 						</div>
 					</div>
 				</div>

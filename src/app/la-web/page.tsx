@@ -28,11 +28,11 @@ const Page = () => {
 						</b>
 						.
 					</p>
-					<h2>Privacidad</h2>
+					<h2 id="privacidad">Privacidad</h2>
 					<p>
 						Esta web no almacena datos personales de los usuarios ni los comparte con terceros. Esta web no hace uso de <i>cookies</i>.
 					</p>
-					<h2>Accesibilidad</h2>
+					<h2 id="accesibilidad">Accesibilidad</h2>
 					<p>
 						Esta web ha sido diseñada para ser accesible y usable por el mayor número de personas posible. Se han seguido las pautas de
 						accesibilidad WCAG 2.1 en su nivel AA.
