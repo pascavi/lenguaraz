@@ -29,7 +29,7 @@ const social = cva({
 export const Social = ({ variant = "default" }: { variant?: "default" | "mobile" }) => {
 	return (
 		<div className={social({ variant })}>
-			<a href="https://www.instagram.com/lenguarazfest" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+			<a href="https://www.instagram.com/festivallenguaraz" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
 				<svg width="24" height="24">
 					<use href="/svg/icons.svg?1.4#instagram" />
 				</svg>

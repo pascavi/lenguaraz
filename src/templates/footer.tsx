@@ -38,14 +38,15 @@ const left = css({
 });
 
 const right = css({
-	display: "flex"
-});
-
-const logos = css({
 	display: "flex",
 	flexDirection: "column",
-	gap: "0.8rem",
+	gap: "1.6rem",
 	lineHeight: "4rem",
+	"& p": {
+		maxWidth: "30rem",
+		lineHeight: "1.8em",
+		fontSize: "1.1rem"
+	},
 	"& > div": {
 		display: "flex",
 		flexWrap: "wrap",
@@ -77,7 +78,7 @@ export const Footer = () => (
 							<Link href="https://www.facebook.com/lenguarazfest">Facebook</Link>
 						</li>
 						<li>
-							<Link href="https://www.instagram.com/lenguarazfest">Instagram</Link>
+							<Link href="https://www.instagram.com/festivallenguaraz">Instagram</Link>
 						</li>
 						<li>
 							<Link href="https://bsky.app/profile/lenguarazfest">Bluesky</Link>
@@ -85,26 +86,27 @@ export const Footer = () => (
 					</ul>
 				</nav>
 				<div className={right}>
-					<div className={logos}>
-						<label>Colaboran:</label>
-						<div>
-							<img
-								src="images/logos/ministerio.jpg"
-								alt="Ministerio de Cultura, Gobiierno de España"
-								width="195"
-								height="56"
-								loading="lazy"
-								title="Ministerio de Cultura, Gobiierno de España"
-							/>
-							<img
-								src="images/logos/lectura_infinita.png"
-								alt="Pacto de estado por la lectura"
-								title="Pacto de estado por la lectura"
-								width="157"
-								height="150"
-								loading="lazy"
-							/>
-						</div>
+					<p>
+						Este proyecto ha recibido una ayuda del Ministerio de Cultura a través de la Dirección General del Libro, del Cómic y de la
+						Lectura.
+					</p>
+					<div>
+						<img
+							src="images/logos/ministerio.jpg"
+							alt="Ministerio de Cultura, Gobiierno de España"
+							width="195"
+							height="56"
+							loading="lazy"
+							title="Ministerio de Cultura, Gobiierno de España"
+						/>
+						<img
+							src="images/logos/lectura_infinita.png"
+							alt="Pacto de estado por la lectura"
+							title="Pacto de estado por la lectura"
+							width="157"
+							height="150"
+							loading="lazy"
+						/>
 					</div>
 				</div>
 			</div>

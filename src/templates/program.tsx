@@ -47,6 +47,7 @@ const entry = css({
 	display: "flex",
 	flexDirection: "column",
 	gap: "0.8rem",
+	alignItems: "flex-start",
 	"& h4": {
 		fontWeight: "700",
 		fontSize: "clamp(1.5rem, 1.6vw, 1.6rem)"
@@ -61,7 +62,8 @@ const entry = css({
 		display: "inline-flex",
 		alignItems: "center",
 		gap: "0.6rem",
-		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)"
+		fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)",
+		color: "primary.dark"
 	},
 	"& svg": {
 		display: "inline-block",
@@ -133,24 +135,28 @@ export const DATA = [
 	{
 		date: "Miércoles 5: prólogo.",
 		events: [
-			{
-				time: "10:00",
-				title: "Presentación de Lenguaraz.",
-				description: "Presentación del festival con Jorge Ollero Perán.",
-				location: "Centro Penitenciario de Murcia",
-				map: "https://maps.app.goo.gl/epbHddnCyqXrLBTV9"
-			},
+			// {
+			// 	time: "10:00",
+			// 	title: "Presentación de Lenguaraz.",
+			// 	description: "Presentación del festival con Jorge Ollero Perán.",
+			// 	location: "Centro Penitenciario de Murcia",
+			// 	map: "https://maps.app.goo.gl/epbHddnCyqXrLBTV9"
+			// },
 			{
 				time: "10:30",
 				title: "“Escribir la Utopía”",
 				description:
-					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Jorge Ollero Perán. Actividad del aula de cultura de Solidarios para el Desarrollo."
+					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Jorge Ollero Perán. Actividad del aula de cultura de Solidarios para el Desarrollo.",
+				location: "Centro Penitenciario de Murcia",
+				map: "https://maps.app.goo.gl/epbHddnCyqXrLBTV9"
 			},
 			{
 				time: "18:00",
 				title: "“Escribir la Utopía”",
 				description:
-					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Lola López Mondéjar. Modera: Jorge Ollero Perán."
+					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Lola López Mondéjar. Modera: Jorge Ollero Perán.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			}
 		]
 	},
@@ -160,41 +166,54 @@ export const DATA = [
 			{
 				time: "17:00",
 				title: "Inauguración de Lenguaraz",
-				description: "Inauguración del festival con la presencia de autoridades y organizadores. Con Ana Sánchez y Jorge Ollero."
+				description: "Inauguración del festival con la presencia de autoridades y organizadores. Con Ana Sánchez y Jorge Ollero.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},
 			{
 				time: "17:30",
 				title: "“Narrar con liberación”",
 				description:
-					"Diálogo sobre las narrativas italianas. Con Sandra Ollo (Editorial Acantilado) y Lola López Mondéjar, escritora y psicoanalista.\nModera: Manuel Madrid, Jefe de área de Culturas en La Verdad."
+					"Diálogo sobre las narrativas italianas. Con Sandra Ollo (Editorial Acantilado) y Lola López Mondéjar, escritora y psicoanalista.\nModera: Manuel Madrid, Jefe de área de Culturas en La Verdad.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},
 			{
 				time: "19:00",
 				title: "Diálogo sobre la lengua italiana",
 				description:
-					"Con Antonio Candeloro, de la Sociedad Dante Alighieri y profesor en la UCAM, y María Belén Hernández González, catedrática de filología Italiana en la UMU.\nModera: Daniela Valencia, directora de Vibrante Comunicación."
+					"Con Antonio Candeloro, de la Sociedad Dante Alighieri y profesor en la UCAM, y María Belén Hernández González, catedrática de filología Italiana en la UMU.\nModera: Daniela Valencia, directora de Vibrante Comunicación.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			}
 		]
 	},
 	{
-		date: "Viernes 7: planteamiento.",
+		date: "Viernes 7: nudo.",
 		events: [
 			{
 				time: "17:00",
 				title: "Ediciones bilingües (Nuestras lenguas)",
 				description:
-					"Presentaremos los libros “Itzulpena/Traducción” (euskera-castellano), de Ángel Erro, editado por el Gobierno de Navarra y “Estiu del 37” (valenciano-castellano), de la editorial Llibres de l’Encobert.\nCon Ángel Erro, poeta y traductor, y José Lopez Camarillas de la Ed. Llibres de l’Encobert. Modera: Constanza Sánchez, politóloga."
+					"Presentaremos los libros “Itzulpena/Traducción” (euskera-castellano), de Ángel Erro, editado por el Gobierno de Navarra y “Estiu del 37” (valenciano-castellano), de la editorial Llibres de l’Encobert.\nCon Ángel Erro, poeta y traductor, y José Lopez Camarillas de la Ed. Llibres de l’Encobert. Modera: Constanza Sánchez, politóloga.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},
 			{
 				time: "19:00",
 				title: "Ediciones bilingües (Italiano- Castellano)",
 				description:
-					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Books y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros.\nCon Jorge Martí, editor en Blackie Books, y Juan Carlos Abril, poeta y traductor. Modera: Isidro Cantero, abogado."
+					"Presentaremos los libros “La Divina Comedia liberada” (Dante Alighieri), de la Editorial Blackie Books y “Las cenizas de Gramsci” (Pier Paolo Pasolini) de la editorial Visor libros.\nCon Jorge Martí, editor en Blackie Books, y Juan Carlos Abril, poeta y traductor. Modera: Isidro Cantero, abogado.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},
+
 			{
 				time: "21:00",
 				title: "Fiesta flamenca",
-				description: "Fiesta flamenca y presentación de “Tarantela Sevillana” a cargo de la autora, Lidia García García."
+				description: "Fiesta flamenca y presentación de “Tarantela Sevillana” a cargo de la autora, Lidia García García.",
+				location: "Café-Bar El sur",
+				map: "https://maps.app.goo.gl/A35vNwA8YvK9s3Lx9"
 			}
 		]
 	},
@@ -204,18 +223,24 @@ export const DATA = [
 			{
 				time: "11:00",
 				title: "Literatura infantil italiana",
-				description: "Encuentro y cuentacuentos con Alessandro Montagnana, autor de libros como “El viaje de Candela” y “Mandril”."
+				description: "Encuentro y cuentacuentos con Alessandro Montagnana, autor de libros como “El viaje de Candela” y “Mandril”.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},
 			{
 				time: "17:30",
 				title: "“Fenómeno Ferrante”",
 				description:
-					"Diálogo sobre el fenómeno literario de Elena Ferrante.\nCon Cecilia Fillipeto, traductora de Elena Ferrante, y María Reyes Ferrer, profesora de la UMU."
+					"Diálogo sobre el fenómeno literario de Elena Ferrante.\nCon Cecilia Fillipeto, traductora de Elena Ferrante, y María Reyes Ferrer, profesora de la UMU.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},
 			{
 				time: "19:00",
 				title: "Encuentro literario.",
-				description: "Diálogo entre Miguel Ángel Hernández (escritor y profesor) y Valentina Colonna (poeta y música).\nModera: Ana Sánchez"
+				description: "Diálogo entre Miguel Ángel Hernández (escritor y profesor) y Valentina Colonna (poeta y música).\nModera: Ana Sánchez",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			}
 		]
 	},
@@ -226,12 +251,16 @@ export const DATA = [
 				time: "12:00",
 				title: "Todo empezó en Italia.",
 				description:
-					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Democracias en extinción” y “Extrema derecha 2.0”, y Enric Juliana, periodista y prologuista de la última obra.\nModera: Elisa Reche, de elDiario.es Murcia."
+					"Conversación sobre nuevos y viejos autoritarismos con Steven Forti, autor de “Democracias en extinción” y “Extrema derecha 2.0”, y Enric Juliana, periodista y prologuista de la última obra.\nModera: Elisa Reche, de elDiario.es Murcia.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},
 			{
 				time: "14:00",
 				title: "Clausura",
-				description: "Clausura de la primera edición de Lenguaraz. Con Ana Sánchez y Jorge Ollero."
+				description: "Clausura de la primera edición de Lenguaraz. Con Ana Sánchez y Jorge Ollero.",
+				location: "Museo de Bellas Artes de Murcia",
+				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			}
 		]
 	}
