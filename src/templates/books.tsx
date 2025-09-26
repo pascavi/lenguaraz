@@ -27,7 +27,10 @@ const card = css({
 	},
 	"& p": {
 		fontSize: "clamp(1.4rem, 1.4vw, 1.8rem)",
-		color: "text.base"
+		color: "text.base",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "flex-start"
 	},
 	"& b": {
 		fontFamily: "secondary",
@@ -44,10 +47,32 @@ const card = css({
 		display: "flex",
 		flexDirection: "column",
 		gap: "0.8rem"
+	},
+	"& section a": {
+		display: "block",
+		fontSize: "1.2rem",
+		marginTop: "0.8rem",
+		background: "primary.dark",
+		color: "white",
+		padding: "0.4rem 1.1rem",
+		borderRadius: "0.4rem",
+		width: "auto",
+		"&:hover": {
+			background: "primary.darker"
+		}
 	}
 });
 
-type Book = { title: string; author: string; editorial: string; description: string; image: string; authorLabel: string; imageWidth: number };
+type Book = {
+	title: string;
+	author: string;
+	editorial: string;
+	description: string;
+	image: string;
+	authorLabel: string;
+	imageWidth: number;
+	link?: string;
+};
 
 const Book = ({ book }: { book: Book }) => {
 	return (
@@ -65,7 +90,14 @@ const Book = ({ book }: { book: Book }) => {
 						<b>Editorial:</b> {book.editorial}
 					</p>
 				</div>
-				<p>{book.description}</p>
+				<p>
+					{book.description}
+					{book.link && (
+						<a href={book.link} target="_blank" rel="noopener noreferrer">
+							En Educania
+						</a>
+					)}
+				</p>
 			</section>
 		</div>
 	);
@@ -150,7 +182,8 @@ const DATA = [
 		description:
 			"La Divina Comedia liberada es una nueva traducción de la obra maestra de Dante Alighieri, que busca acercar el texto original a los lectores contemporáneos. Esta edición incluye notas y comentarios que facilitan la comprensión del contexto histórico y cultural de la obra.",
 		image: "/images/libros/dante.webp",
-		imageWidth: 471
+		imageWidth: 471,
+		link: "https://libreriaeducania.com/products/divina-comedia-liberada-infierno-1"
 	},
 	{
 		title: "Las cenizas de Gramsci",
@@ -170,7 +203,8 @@ const DATA = [
 		description:
 			"Las trayectorias artísticas de Lola Flores, Carmen Sevilla y Sara Montiel coinciden en presentar numerosas conexiones con Italia. En este libro, fruto de sus investigaciones en la Real Academia de España en Roma, Lidia García explora los vínculos entre estas tres populares estrellas del cine, la canción española y el panorama cultural italiano de la época.",
 		image: "/images/libros/tarantela.webp",
-		imageWidth: 421
+		imageWidth: 421,
+		link: "https://libreriaeducania.com/products/tarantella-sevilalna"
 	},
 	{
 		title: "Literatura infantil de Alessandro Montagnana",
@@ -190,7 +224,8 @@ const DATA = [
 		description:
 			"Las novelas de Elena Ferrante han sido aclamadas por su profunda exploración de la identidad femenina, la amistad y las complejidades de las relaciones humanas. A través de su prosa evocadora, Ferrante invita a los lectores a sumergirse en mundos ricos y matizados. La última de sus novelas lleva por título 'La vida mentirosa de los adultos'",
 		image: "/images/libros/ferrante.webp",
-		imageWidth: 421
+		imageWidth: 421,
+		link: "https://libreriaeducania.com/collections/autores-murcianos"
 	},
 	{
 		title: "Poesía de Valentina Colonna",
@@ -210,6 +245,7 @@ const DATA = [
 		description:
 			"En Extrema derecha 2.0 Forti  señala que, alejada de los fascismos que asolaron Europa y desde el estilo populista que permea nuestro presente, la nueva extrema derecha está alcanzando una dimensión de fenómeno global. Disfrazada de democrática, la extrema derecha no solo ha entrado en las instituciones y comienza a tener un mayor peso, sino que pulula por internet y gangrena las redes sociales para corroer la democracia desde dentro.",
 		image: "/images/libros/forti.webp",
-		imageWidth: 413
+		imageWidth: 413,
+		link: "https://libreriaeducania.com/collections/autores-murcianos"
 	}
 ];
