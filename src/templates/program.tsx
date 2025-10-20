@@ -231,7 +231,7 @@ export const DATA = [
 				time: "17:30",
 				title: "“Fenómeno Ferrante”",
 				description:
-					"Diálogo sobre el fenómeno literario de Elena Ferrante.\nCon Cecilia Fillipeto, traductora de Elena Ferrante, y María Reyes Ferrer, profesora de la UMU.",
+					"Diálogo sobre el fenómeno literario de Elena Ferrante.\nCon Carmen Pujante, catedrática de teoría de la literatura y Literatura comparada en la UMU, y María Reyes Ferrer, profesora de la UMU.",
 				location: "Museo de Bellas Artes de Murcia",
 				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			},

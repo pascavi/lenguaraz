@@ -12,6 +12,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 				<head>
 					<link rel="icon" href="/meta/favicon.ico" />
 					<link rel="apple-touch-icon" href="/meta/apple-touch-icon.png" />
+					<meta property="og:site_name" content="Festival Lenguaraz" />
 					<meta property="og:image" content="https://lenguarazfest.com/meta/meta.jpg" />
 					<meta name="theme-color" content="#ffffff" />
 				</head>
