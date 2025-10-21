@@ -81,7 +81,7 @@ export const Footer = () => (
 							<Link href="https://www.instagram.com/festivallenguaraz">Instagram</Link>
 						</li>
 						<li>
-							<Link href="https://bsky.app/profile/lenguarazfest">Bluesky</Link>
+							<Link href="https://bsky.app/profile/lenguarazfest.bsky.social">Bluesky</Link>
 						</li>
 					</ul>
 				</nav>
