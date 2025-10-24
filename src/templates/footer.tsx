@@ -13,6 +13,7 @@ const inner = css({
 	flexWrap: "wrap",
 	gap: "4rem",
 	justifyContent: "space-between",
+	alignItems: "center",
 	fontSize: "clamp(1.4rem, 1.6vw, 1.6rem)",
 	color: "primary.darker",
 	"& a": {
@@ -43,7 +44,7 @@ const right = css({
 	gap: "1.6rem",
 	lineHeight: "4rem",
 	"& p": {
-		maxWidth: "30rem",
+		maxWidth: ["48rem", "58rem"],
 		lineHeight: "1.8em",
 		fontSize: "1.1rem"
 	},
@@ -53,8 +54,12 @@ const right = css({
 		gap: "1.6rem"
 	},
 	"& img": {
-		height: ["5.6rem", null, null, "6.4rem"],
+		height: ["4rem", null, null, "4.8rem"],
 		width: "auto"
+	},
+	"& span": {
+		display: "flex",
+		gap: "0.8rem"
 	}
 });
 
@@ -86,28 +91,46 @@ export const Footer = () => (
 					</ul>
 				</nav>
 				<div className={right}>
+					<div>
+						<img
+							src="images/logos/mubam.png"
+							alt="Museo de Bellas Artes de Murcia"
+							title="Museo de Bellas Artes de Murcia"
+							width="123"
+							height="48"
+							loading="lazy"
+						/>
+						<img
+							src="images/logos/umu.png"
+							alt="Universidad de Murcia. Departamento de Historia del Arte"
+							title="Universidad de Murcia. Departamento de Historia del Arte"
+							width="195"
+							height="48"
+							loading="lazy"
+						/>
+						<span>
+							<img
+								src="images/logos/ministerio.jpg"
+								alt="Ministerio de Cultura, Gobiierno de España"
+								width="195"
+								height="56"
+								loading="lazy"
+								title="Ministerio de Cultura, Gobiierno de España"
+							/>
+							<img
+								src="images/logos/lectura_infinita.png"
+								alt="Pacto de estado por la lectura"
+								title="Pacto de estado por la lectura"
+								width="157"
+								height="150"
+								loading="lazy"
+							/>
+						</span>
+					</div>
 					<p>
 						Este proyecto ha recibido una ayuda del Ministerio de Cultura a través de la Dirección General del Libro, del Cómic y de la
 						Lectura.
 					</p>
-					<div>
-						<img
-							src="images/logos/ministerio.jpg"
-							alt="Ministerio de Cultura, Gobiierno de España"
-							width="195"
-							height="56"
-							loading="lazy"
-							title="Ministerio de Cultura, Gobiierno de España"
-						/>
-						<img
-							src="images/logos/lectura_infinita.png"
-							alt="Pacto de estado por la lectura"
-							title="Pacto de estado por la lectura"
-							width="157"
-							height="150"
-							loading="lazy"
-						/>
-					</div>
 				</div>
 			</div>
 		</Wrapper>
