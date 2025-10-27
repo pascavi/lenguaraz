@@ -192,7 +192,7 @@ const DATA = [
 		editorial: "Visor libros",
 		description:
 			"En Las cenizas de Gramsci se condensa el debate ético de la poesía contemporánea, la búsqueda de una reflexión que mantenga intacta la lealtad a los sueños, sin que esa lealtad nos aparte de la lucidez. El resultado es una conciencia que se sitúa en la vitalidad desesperada, una indagación sentimental que renuncia a la comodidad ofrecida por cualquier tipo de pureza, para siturse en las contradiciones de la historia y del deseo.",
-		image: "/images/libros/cenizas.webp",
+		image: "/images/libros/cenizas_gramsci.webp",
 		imageWidth: 409
 	},
 	{

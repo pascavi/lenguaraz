@@ -8,7 +8,7 @@ const IMAGES = [
 	{ src: "lidiagarcia.webp", alt: "Lidia García", overlay: true },
 	{ src: "incontro.webp", alt: "Il libro dell'incontro" },
 	{ src: "mondejar.webp", alt: "Lola López Mondejar", overlay: true },
-	{ src: "cenizas.webp", alt: "Las cenizas de Gramci" },
+	{ src: "jc_abril.webp", alt: "Juan Carlos Abril", overlay: true },
 	{ src: "forti.webp", alt: "Steven Forti", overlay: true },
 	{ src: "hernandez.webp", alt: "Miguel Ángel Hernández", overlay: true },
 	{ src: "traduccion.webp", alt: "Itzulpena-Traducción" },
