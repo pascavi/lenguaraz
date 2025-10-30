@@ -146,7 +146,7 @@ export const DATA = [
 				time: "10:30",
 				title: "“Escribir la Utopía”",
 				description:
-					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Jorge Ollero Perán. Actividad del aula de cultura de Solidarios para el Desarrollo.",
+					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patrizia Patrizi, profesora de la Universidad de Sassari, y Ángeles Carnacea, de Solidarios para el Desarrollo.",
 				location: "Centro Penitenciario de Murcia",
 				map: "https://maps.app.goo.gl/epbHddnCyqXrLBTV9"
 			},
@@ -154,7 +154,7 @@ export const DATA = [
 				time: "18:00",
 				title: "“Escribir la Utopía”",
 				description:
-					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patricia Patrizi, profesora de la Universidad de Sassari, y Lola López Mondéjar. Modera: Jorge Ollero Perán.",
+					"Conversación sobre “Il libro dell'incontro” (Editorial Il Saggiatore), sobre la realización de encuentros restaurativos entre víctimas de violencia armada y sus autores.\nCon Patrizia Patrizi, profesora de la Universidad de Sassari, y Lola López Mondéjar. Modera: Jorge Ollero Perán.",
 				location: "Museo de Bellas Artes de Murcia",
 				map: "https://maps.app.goo.gl/rQLSZBV6tffK9urD8"
 			}
