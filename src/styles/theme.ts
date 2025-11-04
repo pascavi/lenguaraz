@@ -32,15 +32,13 @@ export const theme = {
 		}
 	},
 	keyframes: {
-		bird: {
-			"0%, 100%": { transform: "translateY(0)" },
-			"50%": { transform: "translateY(3%) rotate(1deg)" }
+		fadeIn: {
+			"0%": { opacity: 0 },
+			"100%": { opacity: 1 }
 		},
-		dialogue: {
-			"0%, 100%": { opacity: 1, transform: "scale(1)" },
-			"2%": { opacity: 0, transform: "scale(1)" },
-			"5%": { opacity: 0, transform: "scale(0.9)" },
-			"15%": { opacity: 1, transform: "scale(1)" }
+		slideUp: {
+			"0%": { transform: "translateY(2rem)", opacity: 0 },
+			"100%": { transform: "translateY(0%)", opacity: 1 }
 		}
 	}
 };

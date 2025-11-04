@@ -2,6 +2,7 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
+import { Analytics, type BeforeSendEvent } from "@vercel/analytics/next";
 
 export const Globals = ({ children }: { children: React.ReactNode }) => {
 	const pathname = usePathname();
@@ -61,4 +62,15 @@ const shareAction = () => {
 	} catch {
 		//
 	}
+};
+
+export const VercelAnalytics = () => {
+	const beforeSend = (event: BeforeSendEvent) => {
+		if (event.url.includes("/slides")) {
+			return null;
+		}
+		return event;
+	};
+
+	return <Analytics mode="production" beforeSend={beforeSend} />;
 };

@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom";
 import "./globals.css";
-import { Globals } from "./globals";
-import { Analytics } from "@vercel/analytics/next";
+import { Globals, VercelAnalytics } from "./globals";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	ReactDOM.preload("/fonts/poppins.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
@@ -18,7 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 				</head>
 				<body>{children}</body>
 			</Globals>
-			{process.env.NODE_ENV === "production" && <Analytics />}
+			<VercelAnalytics />
 		</html>
 	);
 };
