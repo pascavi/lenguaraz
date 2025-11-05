@@ -9,15 +9,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 	const router = useRouter();
 	const [zoom, setZoom] = React.useState(1);
 
-	React.useEffect(() => {
-		const updateZoom = () => {
-			const zoom = 1018 / window.innerHeight; // window.innerHeight / 786 / window.devicePixelRatio;
-			setZoom(zoom);
-		};
-		// updateZoom();
-		window.addEventListener("resize", updateZoom);
-		return () => window.removeEventListener("resize", updateZoom);
-	}, []);
+	// React.useEffect(() => {
+	// 	const updateZoom = () => {
+	// 		if (window.location.search.includes("zoom")) return;
+	// 		const zoom = 1018 / window.innerHeight;
+	// 		console.log(zoom, "!");
+	// 		setZoom(zoom);
+	// 	};
+	// 	updateZoom();
+	// 	window.addEventListener("resize", updateZoom);
+	// 	return () => window.removeEventListener("resize", updateZoom);
+	// }, []);
 
 	React.useEffect(() => {
 		const currentIndex = SLIDES.indexOf(pathname);
@@ -25,6 +27,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 			router.push(SLIDES[0]);
 			return;
 		}
+		if (window.location.search.includes("stop")) return;
 		const nextPath = SLIDES[(currentIndex + 1) % SLIDES.length];
 		const redirect = () => router.push(nextPath);
 		const timeout = setTimeout(redirect, SLIDES_DELAY);

@@ -8,7 +8,8 @@ const slides = css({
 	justifyContent: "center",
 	alignItems: "center",
 	backgroundColor: "primary.light",
-	padding: "3%"
+	padding: "3%",
+	overflow: "hidden"
 });
 
 const container = css({
@@ -16,7 +17,6 @@ const container = css({
 	display: "flex",
 	maxWidth: "135rem",
 	aspectRatio: "15 / 9",
-
 	justifyContent: "space-between",
 	gap: "6%",
 	"& > div:nth-child(1)": {
@@ -28,7 +28,7 @@ const container = css({
 });
 
 const leftStyle = css({
-	display: "flex",
+	display: ["none", null, "flex"],
 	flexDirection: "column",
 	borderRight: "2px solid",
 	borderColor: "primary.lighter",
@@ -45,6 +45,8 @@ const leftStyle = css({
 const rightStyle = css({
 	containerType: "inline-size",
 	width: "100%",
+	maxWidth: "80%",
+	margin: "0 auto",
 	display: "flex",
 	alignItems: "center"
 });
