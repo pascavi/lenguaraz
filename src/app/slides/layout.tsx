@@ -7,7 +7,6 @@ import { Slides, Left, Right, Logos } from "@/templates";
 const Layout = ({ children }: { children: React.ReactNode }) => {
 	const pathname = usePathname();
 	const router = useRouter();
-	const [zoom, setZoom] = React.useState(1);
 
 	// React.useEffect(() => {
 	// 	const updateZoom = () => {
@@ -39,7 +38,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 		<>
 			<title>Lenguaraz, donde las lenguas son casas abiertas</title>
 			<meta name="robots" content="noindex,nofollow" />
-			<Slides zoom={zoom}>
+			<Slides zoom={1}>
 				<Left>
 					<img src="/svg/logo.svg" width="126" height="45" alt="" />
 					<Logos />
@@ -50,7 +49,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 	);
 };
 
-export const SLIDES = ["/slides/miercoles", "/slides/jueves", "/slides/viernes", "/slides/sabado", "/slides/domingo"];
+export const SLIDES = ["/slides/viernes", "/slides/sabado", "/slides/domingo"];
 
 export const SLIDES_DELAY = 15 * 1000;
 
