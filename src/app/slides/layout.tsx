@@ -49,7 +49,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 	);
 };
 
-export const SLIDES = ["/slides/viernes", "/slides/sabado", "/slides/domingo"];
+export const SLIDES = ["/slides/sabado", "/slides/domingo"];
 
 export const SLIDES_DELAY = 15 * 1000;
 
