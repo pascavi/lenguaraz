@@ -4,6 +4,8 @@ import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { Slides, Left, Right, Logos } from "@/templates";
 
+const STOPPED = true;
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
 	const pathname = usePathname();
 	const router = useRouter();
@@ -26,7 +28,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 			router.push(SLIDES[0]);
 			return;
 		}
-		if (window.location.search.includes("stop")) return;
+		if (STOPPED || window.location.search.includes("stop")) return;
 		const nextPath = SLIDES[(currentIndex + 1) % SLIDES.length];
 		const redirect = () => router.push(nextPath);
 		const timeout = setTimeout(redirect, SLIDES_DELAY);
