@@ -25,7 +25,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 	React.useEffect(() => {
 		const currentIndex = SLIDES.indexOf(pathname);
 		if (currentIndex === -1) {
-			router.push(SLIDES[0]);
+			router.push("/slides/domingo");
 			return;
 		}
 		if (STOPPED || window.location.search.includes("stop")) return;
